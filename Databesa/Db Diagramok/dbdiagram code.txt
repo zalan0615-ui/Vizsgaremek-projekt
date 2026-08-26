@@ -1,0 +1,95 @@
+Table User {
+  id integer(11) [primary key]
+  username varchar(100)
+  Firstname varchar(100) 
+  Lastname varchar(100)
+  phone_number varchar(50)
+  email varchar(150) [unique]
+  created_at timestamp
+  Memberships_id integer(11)
+  password_hash varchar(255)
+  is_active boolean
+}
+
+Table Trainer {
+  id integer(11) [primary key]
+  Firstname varchar(100) 
+  Lastname varchar(100)
+  phone_number varchar(50)
+  email varchar(150)
+  title text
+  created_at timestamp
+  is_active boolean
+}
+
+Table Memberships {
+  id integer(11) [primary key]
+  duration_days integer // Example. 1 (day), 30 (days), 365 (days)
+  title text [not null]
+  pays_id integer(11)
+  Date_of_application datetime 
+
+}
+
+Table pays {
+  id integer(11) [primary key]
+  Price decimal 
+  Device varchar(100)
+}
+
+Table The_gym_data {
+  id integer(11) [primary key]  
+  phone_number varchar(50)
+  email varchar(150)
+  Trainer_id integer(11)
+  user_id integer(11)
+  created_at timestamp
+}
+
+Table admins {
+  id integer(11) [primary key]  
+  email varchar(150)
+  password_hash varchar(255)
+  Firstname varchar(100) 
+  Lastname varchar(100)
+  role varchar(50)
+  created_at timestamp
+  is_active boolean
+}
+
+Table log {
+  id integer(11) [primary key]  
+  user_id integer(11)
+  admin_id integer(11)
+  action varchar(100)
+  entity_table varchar(100)
+  entity_id integer(11)
+  created_at timestamp
+}
+
+//Több a többhöz kapcsolat
+
+Table UserxTrainer {
+  id integer(11) [primary key]
+  User_id integer(11)
+  Trainer_id integer(11)
+
+}
+
+// kapcsolatok Ref
+
+//Több a többhöz Ref
+Ref: UserxTrainer.User_id > User.id
+Ref: UserxTrainer.Trainer_id > Trainer.id
+
+
+// egy az egyhez, több az egyhez, egy a többhöz
+
+Ref:  User.Memberships_id > Memberships.id
+Ref: The_gym_data.Trainer_id > Trainer.id
+Ref: The_gym_data.user_id > User.id
+Ref: log.user_id > User.id
+Ref: log.admin_id > admins.id
+Ref: Memberships.pays_id > pays.id
+
+
