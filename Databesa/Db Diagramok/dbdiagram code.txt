@@ -1,14 +1,26 @@
 Table User {
   id integer(11) [primary key]
   username varchar(100)
-  Firstname varchar(100) 
-  Lastname varchar(100)
+  first_name varchar(100) //Még átkell gondolni, hogy csak felhasználó név vagy ezzek is kellenek.
+  Lastname varchar(100) //Még átkell gondolni, hogy csak felhasználó név vagy ezzek is kellenek.
   phone_number varchar(50)
   email varchar(150) [unique]
-  created_at timestamp
-  Memberships_id integer(11)
   password_hash varchar(255)
+  
+  // BEJELENTKEZÉSI MEZŐK
+
+  remember_token varchar(100)
+  reset_password_token varchar(255) // Jelszóvisszaállító linkhez
+  reset_password_expires datetime // Meddig érvényes a visszaállító link
+  email_verified_at datetime  // Opcionális: Mikor erősítette meg az e-mail címét
+
+  // ADMINISZTRATÍV MEZŐK
+
+  created_at timestamp
   is_active boolean
+  deleted_at timestamp
+  update_at timestamp
+  is_deleted tinyint
 }
 
 Table Trainer {
@@ -20,30 +32,50 @@ Table Trainer {
   title text
   created_at timestamp
   is_active boolean
+  deleted_at timestamp
+  update_at timestamp
+  is_deleted tinyint
+
 }
 
 Table Memberships {
   id integer(11) [primary key]
   duration_days integer // Example. 1 (day), 30 (days), 365 (days)
   title text [not null]
-  pays_id integer(11)
+  price decimal(10,2) [not null]
   Date_of_application datetime 
 
 }
 
-Table pays {
+Table User_Memberships {
   id integer(11) [primary key]
-  Price decimal 
-  Device varchar(100)
+  User_id integer(11)
+  Membership_id integer(11)
+  pays_id integer(11)                // Melyik tranzakció alapján jött létre
+  Start_date datetime
+  End_date datetime
+  Status enum('active', 'expired', 'cancelled') [default: 'active']
+  created_at timestamp
 }
 
-Table The_gym_data {
-  id integer(11) [primary key]  
+Table pays {
+  id integer(11) [primary key]
+  user_id integer(11)                // Ki fizetett?
+  membership_id integer(11)          // Melyik bérletet vette meg?
+  price decimal(10,2)                // Mennyit fizetett valójában?
+  payment_method varchar(50)         // pl. 'Stripe', 'OTP Simple', 'Cash', 'POS'
+  status enum('pending', 'success', 'failed') [default: 'pending'] // Sikerült-e?
+  created_at timestamp               // Mikor történt a fizetés?
+}
+
+Table Gym_Info {
+  id integer(11) [primary key]
+  gym_name varchar(100)
+  address varchar(255)
   phone_number varchar(50)
   email varchar(150)
-  Trainer_id integer(11)
-  user_id integer(11)
-  created_at timestamp
+  opening_hours text
+  updated_at timestamp
 }
 
 Table admins {
@@ -55,6 +87,9 @@ Table admins {
   role varchar(50)
   created_at timestamp
   is_active boolean
+  deleted_at timestamp
+  update_at timestamp
+
 }
 
 Table log {
@@ -67,7 +102,51 @@ Table log {
   created_at timestamp
 }
 
+Table timetable_days {
+  id integer(11) [primary key]  
+  Class_id integer(11)
+  Start_time datetime
+  End_time datetime
+  Max_capacity integer
+  Room varchar(50)
+  Status enum('Active', 'missed out', 'deleted')
+}
+
+
+
+Table Class {
+  id integer(11) [primary key]  
+  Class_name varchar(150)
+  title text
+  Difficulty_level enum('Begginer', 'medium', 'hard')
+  Trainer_id integer(11)
+}
+
+
+Table Contact_Messages {
+  id integer(11) [primary key]
+  Name varchar(150)
+  Email varchar(150)
+  Message text
+  
+  Status enum('new', 'in_progress', 'resolved') [default: 'new']
+  created_at timestamp
+  Resolved_at timestamp // Mikor válaszolt rá az admin
+  Admin_id integer(11) // Melyik admin kezelte (opcionális)
+}
+
+
 //Több a többhöz kapcsolat
+
+Table ClassxUser {
+  id integer(11) [primary key]  
+  User_id integer(11)
+  class_id integer(11)
+  timetable_days_id integer(11) // class_id helyett ide hivatkozunk!
+  created_at timestamp          // Mikor foglalta le
+  status enum('booked', 'attended', 'cancelled') [default: 'booked']
+
+}
 
 Table UserxTrainer {
   id integer(11) [primary key]
@@ -81,15 +160,22 @@ Table UserxTrainer {
 //Több a többhöz Ref
 Ref: UserxTrainer.User_id > User.id
 Ref: UserxTrainer.Trainer_id > Trainer.id
-
+Ref: ClassxUser.User_id > User.id
+Ref: ClassxUser.timetable_days_id > timetable_days.id
 
 // egy az egyhez, több az egyhez, egy a többhöz
 
-Ref:  User.Memberships_id > Memberships.id
-Ref: The_gym_data.Trainer_id > Trainer.id
-Ref: The_gym_data.user_id > User.id
+
+Ref: Contact_Messages.Admin_id > admins.id
 Ref: log.user_id > User.id
 Ref: log.admin_id > admins.id
-Ref: Memberships.pays_id > pays.id
+Ref: timetable_days.Class_id > Class.id
+Ref: User_Memberships.User_id > User.id
+Ref: User_Memberships.Membership_id > Memberships.id
 
+// Fizetés hivatkozásai
+Ref: pays.user_id > User.id
+Ref: pays.membership_id > Memberships.id
 
+// Aktív bérlet hivatkozásai
+Ref: User_Memberships.pays_id > pays.id
