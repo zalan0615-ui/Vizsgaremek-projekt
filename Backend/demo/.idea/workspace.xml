@@ -4,34 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ecbf12-8be9-4b3d-95b1-ee54b63ad20a" name="Changes" comment="" />
+    <list default="true" id="56ecbf12-8be9-4b3d-95b1-ee54b63ad20a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000082338580056" />
-      <entry key="MS500" value="1.0961879512600632" />
-      <entry key="S2" value="1.5577852034129576" />
-      <entry key="S5" value="1.96991996824106" />
-      <entry key="S10" value="3.1866072670350905" />
-      <entry key="S30" value="7.486350341136059" />
-      <entry key="S60" value="10.08403679136494" />
-      <entry key="M2" value="11.839144285710983" />
-      <entry key="M5" value="13.088006215052383" />
-      <entry key="M10" value="13.649218087215901" />
-      <entry key="M15" value="13.988793805894943" />
-      <entry key="M30" value="14.620844908971945" />
-      <entry key="H1" value="15.168972805240799" />
-      <entry key="H2" value="15.540362346513609" />
-      <entry key="H4" value="15.757816199290506" />
-      <entry key="D1" value="15.957792194730722" />
-      <entry key="W1" value="15.993923411275876" />
+      <entry key="MS100" value="1.0504155250622396" />
+      <entry key="MS500" value="1.6031108867057315" />
+      <entry key="S2" value="2.3416388024963872" />
+      <entry key="S5" value="2.8556659414143697" />
+      <entry key="S10" value="4.092816469870844" />
+      <entry key="S30" value="8.412169625416968" />
+      <entry key="S60" value="11.033952082738574" />
+      <entry key="M2" value="12.809706759509412" />
+      <entry key="M5" value="14.0749793850084" />
+      <entry key="M10" value="14.642423686789266" />
+      <entry key="M15" value="14.984151129509291" />
+      <entry key="M30" value="15.618418485173125" />
+      <entry key="H1" value="16.16771405842974" />
+      <entry key="H2" value="16.53971755046765" />
+      <entry key="H4" value="16.75748928661148" />
+      <entry key="D1" value="16.957737017354752" />
+      <entry key="W1" value="16.993915510934578" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -53,29 +71,29 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9201953330860418" />
-      <entry key="MS500" value="1.078365777337136" />
-      <entry key="S2" value="1.551705052554064" />
-      <entry key="S5" value="1.9665259610774817" />
-      <entry key="S10" value="3.181734636434943" />
-      <entry key="S30" value="7.479865966005404" />
-      <entry key="S60" value="10.079211033586958" />
-      <entry key="M2" value="11.836185524584243" />
-      <entry key="M5" value="13.086664753449172" />
-      <entry key="M10" value="13.648503427158737" />
-      <entry key="M15" value="13.988293606576706" />
-      <entry key="M30" value="14.620569353175616" />
-      <entry key="H1" value="15.168823263212836" />
-      <entry key="H2" value="15.540283501139118" />
-      <entry key="H4" value="15.757775573027137" />
-      <entry key="D1" value="15.957785238303801" />
-      <entry key="W1" value="15.993922412704022" />
+      <entry key="MS100" value="0.09680685884566508" />
+      <entry key="MS500" value="1.143494621910204" />
+      <entry key="S2" value="2.1976499093277617" />
+      <entry key="S5" value="2.7944694602026483" />
+      <entry key="S10" value="4.058654447314087" />
+      <entry key="S30" value="8.395840706981154" />
+      <entry key="S60" value="11.024183561166154" />
+      <entry key="M2" value="12.804268897960794" />
+      <entry key="M5" value="14.07264393281274" />
+      <entry key="M10" value="14.641211595692708" />
+      <entry key="M15" value="14.983319210802916" />
+      <entry key="M30" value="15.617977018637795" />
+      <entry key="H1" value="16.167481547133413" />
+      <entry key="H2" value="16.539597216664998" />
+      <entry key="H4" value="16.757427915125955" />
+      <entry key="D1" value="16.957726603244495" />
+      <entry key="W1" value="16.993914018404286" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3KixEB2rGh3AYewkm22wt5Mm4Ml" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -87,9 +105,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "Database",
+    "git-widget-placeholder": "Backend",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Varga Zalán/Documents/Vizsgaremek/Vizsgaremek-projekt/Backend/demo",
