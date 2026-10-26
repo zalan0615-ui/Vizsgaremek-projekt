@@ -10,6 +10,9 @@ import lombok.Setter;
 @Setter
 public class CreateUserRequest {
 
+
+//Ide üzeneteket írni!!!
+
     @NotBlank
     @Size(max = 100)
     private String username;
