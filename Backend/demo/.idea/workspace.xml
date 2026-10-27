@@ -5,16 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56ecbf12-8be9-4b3d-95b1-ee54b63ad20a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ClassBookings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ClassName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ClassSchedules.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Classes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ContactMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ContactStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/GymInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/MembershipStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Memberships.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/PaymentStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Pays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/RoomType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Trainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/TrainerSchedules.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/UserMemberships.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/UserTokens.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/UserXTrainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/gymforge/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/gymforge/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/gymforge/dto/request/CreateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/gymforge/dto/request/CreateUserRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/gymforge/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/gymforge/service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +37,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -33,23 +47,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0504155250622396" />
-      <entry key="MS500" value="1.6031108867057315" />
-      <entry key="S2" value="2.3416388024963872" />
-      <entry key="S5" value="2.8556659414143697" />
-      <entry key="S10" value="4.092816469870844" />
-      <entry key="S30" value="8.412169625416968" />
-      <entry key="S60" value="11.033952082738574" />
-      <entry key="M2" value="12.809706759509412" />
-      <entry key="M5" value="14.0749793850084" />
-      <entry key="M10" value="14.642423686789266" />
-      <entry key="M15" value="14.984151129509291" />
-      <entry key="M30" value="15.618418485173125" />
-      <entry key="H1" value="16.16771405842974" />
-      <entry key="H2" value="16.53971755046765" />
-      <entry key="H4" value="16.75748928661148" />
-      <entry key="D1" value="16.957737017354752" />
-      <entry key="W1" value="16.993915510934578" />
+      <entry key="MS100" value="1.7479222169615416" />
+      <entry key="MS500" value="2.497830341535309" />
+      <entry key="S2" value="3.302208595898027" />
+      <entry key="S5" value="3.836333587966433" />
+      <entry key="S10" value="5.078939121308012" />
+      <entry key="S30" value="9.402651257456265" />
+      <entry key="S60" value="12.027707858805641" />
+      <entry key="M2" value="13.806081675929194" />
+      <entry key="M5" value="15.073385989935511" />
+      <entry key="M10" value="15.64159484628182" />
+      <entry key="M15" value="15.98358566808648" />
+      <entry key="M30" value="16.6181237839123" />
+      <entry key="H1" value="17.16756152479779" />
+      <entry key="H2" value="17.539639528641843" />
+      <entry key="H4" value="17.757449762011138" />
+      <entry key="D1" value="17.95773035119666" />
+      <entry key="W1" value="17.993914556594415" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -71,23 +85,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.09680685884566508" />
-      <entry key="MS500" value="1.143494621910204" />
-      <entry key="S2" value="2.1976499093277617" />
-      <entry key="S5" value="2.7944694602026483" />
-      <entry key="S10" value="4.058654447314087" />
-      <entry key="S30" value="8.395840706981154" />
-      <entry key="S60" value="11.024183561166154" />
-      <entry key="M2" value="12.804268897960794" />
-      <entry key="M5" value="14.07264393281274" />
-      <entry key="M10" value="14.641211595692708" />
-      <entry key="M15" value="14.983319210802916" />
-      <entry key="M30" value="15.617977018637795" />
-      <entry key="H1" value="16.167481547133413" />
-      <entry key="H2" value="16.539597216664998" />
-      <entry key="H4" value="16.757427915125955" />
-      <entry key="D1" value="16.957726603244495" />
-      <entry key="W1" value="16.993914018404286" />
+      <entry key="MS100" value="0.7809540109356895" />
+      <entry key="MS500" value="2.0027256431477265" />
+      <entry key="S2" value="3.143805569022329" />
+      <entry key="S5" value="3.768781572943781" />
+      <entry key="S10" value="5.0415022706794685" />
+      <entry key="S30" value="9.385209315422076" />
+      <entry key="S60" value="12.01737895532741" />
+      <entry key="M2" value="13.800362358220394" />
+      <entry key="M5" value="15.070937594499838" />
+      <entry key="M10" value="15.640326218378584" />
+      <entry key="M15" value="15.982716043473378" />
+      <entry key="M30" value="16.61766345687836" />
+      <entry key="H1" value="17.167319581236292" />
+      <entry key="H2" value="17.539514478166314" />
+      <entry key="H4" value="17.75738603204732" />
+      <entry key="D1" value="17.95771954398627" />
+      <entry key="W1" value="17.99391300790645" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -95,6 +109,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3KixEB2rGh3AYewkm22wt5Mm4Ml" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -106,6 +123,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Application.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "Backend",
