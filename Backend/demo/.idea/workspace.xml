@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56ecbf12-8be9-4b3d-95b1-ee54b63ad20a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ClassBookings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ClassName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ClassSchedules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Classes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ContactMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/ContactStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/GymInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/MembershipStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Memberships.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/PaymentStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Pays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/RoomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/Trainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/TrainerSchedules.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/UserMemberships.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/UserTokens.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/gymforge/model/UserXTrainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/gymforge/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/gymforge/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/gymforge/dto/request/CreateUserRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/gymforge/dto/request/CreateUserRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/gymforge/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/gymforge/service/UserService.class" afterDir="false" />
-    </list>
+    <list default="true" id="56ecbf12-8be9-4b3d-95b1-ee54b63ad20a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
