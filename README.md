@@ -11,28 +11,18 @@ Csoportagok:
 Varga Zalán, Grain Martin
  
 Téma:
-Kond weboldali, Visszanéző program
+Kondi, Visszanéző program
  
 Projektvezető:
 Varga Zalán
 
 Milyen problémát old meg?
-Kondi weboldal:
+Kondi:
 Nagyváros(Budapesti konditerem) ezért az ott lakóknak fogja megkönnyíteni az életét.
 -Több szolgáltatás van az épületben(kozmetika, szauna, szolárium, masszázs)
 -Több személyi edző dolgozik a kondiban, ezért könnyen lehet edzéstervet előállítatni, edzéseket lefolytatni.
 -A személyi edzőktől lehet kérni edzéstervet, étrend tervet.
 -Könnyen elérhető, városközpontban helyezkedik el, nagy parkoló áll rendelkezésre.
 -Nagy a tér, sok a kondikellék(gépek, súlyzók, súlyok)
-
- Visszanéző program:
-
--Egy könnyeben visszanéző felvevő program. 
--Telefonon vissza nézheted, hogy mit csináltál. 
-
-
-- Ez olyan dolgokra jó, mint programozás is lehet, de ennél többre is. Például nem mentegeted külön-külön a projektett és valamit csináltál/töröltél, amit nem tudsz visszahozni egy ctrl+z-vel, ezzel vissza nézed mit csinálták könnyen és meg is van, hogy mit töröltél ki.
-
--24 órás idő kerett. 
-
+-Közelben van buszmegálló, villamosmegálló
 
