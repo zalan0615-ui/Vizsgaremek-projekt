@@ -12,8 +12,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
 import java.util.List;
+
+//---------------------------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------------------------//
 
 @Service
 @RequiredArgsConstructor
@@ -22,32 +24,40 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
+    //-----------------------------------------------------------------------------
+    // Létrehozás (createuser eljárás)
+
     @Transactional
     public UserResponse createUser(CreateUserRequest request) {
 
-        if (userRepository.existsByUsername(request.getUsername())) {
+        List<User> users = userRepository.getAllUsers();
+        if (users.stream().anyMatch(u -> u.getUsername().equals(request.getUsername()))) {
             throw new DuplicateResourceException("Ez a felhasználónév már foglalt");
         }
-        if (userRepository.existsByEmail(request.getEmail())) {
+        if (users.stream().anyMatch(u -> u.getEmail().equals(request.getEmail()))) {
             throw new DuplicateResourceException("Ez az email már regisztrálva van");
         }
 
-        User user = User.builder()
-                .username(request.getUsername())
-                .email(request.getEmail())
-                .passwordHash(passwordEncoder.encode(request.getPassword()))
-                .build();
+        userRepository.createUser(
+                null,                                              // image_id (még nincs kép)
+                request.getUsername(),
+                request.getEmail(),
+                passwordEncoder.encode(request.getPassword())
+        );
 
-        User saved = userRepository.save(user);
+        User saved = userRepository.getAllUsers().stream()
+                .filter(u -> u.getEmail().equals(request.getEmail()))
+                .findFirst()
+                .orElseThrow(() -> new ResourceNotFoundException("A felhasználó létrehozása nem sikerült"));
 
         return toResponse(saved);
     }
 
-    //----------------------------------------------------------------------------
-    // Lista, módosítás, soft delete
+    //-----------------------------------------------------------------------------
+
 
     public List<UserResponse> getAllUsers() {
-        return userRepository.findAllActive()
+        return userRepository.getAllUsers()
                 .stream()
                 .map(this::toResponse)
                 .toList();
@@ -58,30 +68,42 @@ public class UserService {
         User user = findActiveUser(id);
 
         if (!user.getUsername().equals(request.getUsername())
-                && userRepository.existsByUsername(request.getUsername())) {
+                && userRepository.getAllUsers().stream()
+                .anyMatch(u -> u.getUsername().equals(request.getUsername()))) {
             throw new DuplicateResourceException("Ez a felhasználónév már foglalt");
         }
         if (!user.getEmail().equals(request.getEmail())
-                && userRepository.existsByEmail(request.getEmail())) {
+                && userRepository.getAllUsers().stream()
+                .anyMatch(u -> u.getEmail().equals(request.getEmail()))) {
             throw new DuplicateResourceException("Ez az email már regisztrálva van");
         }
 
-        user.setUsername(request.getUsername());
-        user.setEmail(request.getEmail());
+        userRepository.updateUser(
+                id,
+                user.getImageId(),
+                request.getUsername(),
+                request.getEmail(),
+                user.getIsActive()
+        );
 
-        return toResponse(userRepository.save(user));
+        return toResponse(findActiveUser(id));
     }
 
     @Transactional
     public void softDeleteUser(Integer id) {
-        User user = findActiveUser(id);
-        user.setIsDeleted(true);
-        user.setDeletedAt(LocalDateTime.now());
-        userRepository.save(user);
+        findActiveUser(id);
+        userRepository.softDeleteUser(id);
     }
 
+    public UserResponse getUserById(Integer id) {
+        return toResponse(findActiveUser(id));
+    }
+
+    //-----------------------------------------------------------------------------
+    // Segédmetódusok
+
     private User findActiveUser(Integer id) {
-        return userRepository.findActiveById(id)
+        return userRepository.getUserById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("A felhasználó nem található"));
     }
 
@@ -93,8 +115,6 @@ public class UserService {
                 .isActive(user.getIsActive())
                 .build();
     }
-
-    public UserResponse getUserById(Integer id) {
-        return toResponse(findActiveUser(id));
-    }
 }
+
+//---------------------------------------------------------------------------------------------------------//

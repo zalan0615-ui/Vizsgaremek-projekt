@@ -11,18 +11,17 @@ import lombok.Setter;
 public class CreateUserRequest {
 
 
-//Ide üzeneteket írni!!!
 
-    @NotBlank
+    @NotBlank(message = "A név megadása kötelező")
     @Size(max = 100)
     private String username;
 
-    @NotBlank
-    @Email
+    @NotBlank(message = "A email megadása kötelező")
+    @Email(message = "Nem érvényes email formátum")
     @Size(max = 150)
     private String email;
 
-    @NotBlank
+    @NotBlank(message = "A jelszó megadása kötelező")
     @Size(min = 8, max = 100)
     private String password;
 }
