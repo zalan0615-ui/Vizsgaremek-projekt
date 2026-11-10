@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -18,19 +18,27 @@ public class ImageService {
 
     private final ImageRepository imageRepository;
 
+    //---------------------------------------------------------------------------
+    // Létrehozás (createimages eljárás)
+
     @Transactional
     public ImageResponse createImage(ImageRequest request) {
-        Image image = Image.builder()
-                .imageUrl(request.getImageUrl())
-                .isDeleted(false)
-                .build();
 
-        Image saved = imageRepository.save(image);
+        imageRepository.createImage(request.getImageUrl());
+
+        Image saved = imageRepository.getAllImages().stream()
+                .filter(i -> i.getImageUrl().equals(request.getImageUrl()))
+                .max(Comparator.comparing(Image::getId))
+                .orElseThrow(() -> new ResourceNotFoundException("A kép létrehozása nem sikerült"));
+
         return toResponse(saved);
     }
 
+    //---------------------------------------------------------------------------
+    // Lekérdezés (getimages, getByIdimages eljárás)
+
     public List<ImageResponse> getAllImages() {
-        return imageRepository.findByIsDeletedFalse()
+        return imageRepository.getAllImages()
                 .stream()
                 .map(this::toResponse)
                 .toList();
@@ -40,26 +48,32 @@ public class ImageService {
         return toResponse(findActiveImage(id));
     }
 
+    //---------------------------------------------------------------------------
+    // Módosítás (updateimages eljárás)
+
     @Transactional
     public ImageResponse updateImage(Integer id, ImageRequest request) {
-        Image image = findActiveImage(id);
-        image.setImageUrl(request.getImageUrl());
-        Image saved = imageRepository.save(image);
-        return toResponse(saved);
+        findActiveImage(id);
+
+        imageRepository.updateImage(id, request.getImageUrl());
+
+        return toResponse(findActiveImage(id));
     }
+
+    //---------------------------------------------------------------------------
+    // Törlés (softDeleteimages eljárás)
 
     @Transactional
     public void deleteImage(Integer id) {
-        Image image = findActiveImage(id);
-        image.setIsDeleted(true);
-        image.setDeletedAt(LocalDateTime.now());
-        imageRepository.save(image);
+        findActiveImage(id);
+        imageRepository.softDeleteImage(id);
     }
 
+    //---------------------------------------------------------------------------
     // Segédmetódusok
 
     private Image findActiveImage(Integer id) {
-        return imageRepository.findByIdAndIsDeletedFalse(id)
+        return imageRepository.getImageById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("A kép nem található"));
     }
 
@@ -71,3 +85,5 @@ public class ImageService {
                 .build();
     }
 }
+
+//----------------------------------------------------------------------------------------------------//
