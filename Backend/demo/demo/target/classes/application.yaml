@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: gym-forge-backend
+
+  datasource:
+    url: jdbc:mysql://localhost:8889/gym_forge_budapest?useUnicode=true&characterEncoding=utf8&serverTimezone=Europe/Budapest
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: rJ6LZmkA4l8XncNC0jwbGdMzayQeqOBWog2YI1Hx3vsRiP5T
+  expiration-ms: 86400000
+
+server:
+  port: 8081
