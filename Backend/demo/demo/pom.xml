@@ -59,6 +59,13 @@
             <scope>runtime</scope>
         </dependency>
 
+    <!--    Ha van hiba itt van! -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
         <!-- ÚJ: jelszó titkosítás (BCrypt) -->
         <dependency>
             <groupId>org.springframework.security</groupId>

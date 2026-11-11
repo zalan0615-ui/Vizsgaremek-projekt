@@ -4,12 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="256ea715-36fc-485f-9aea-883874dc4137" name="Changes" comment="" />
+=======
+    <list default="true" id="67a3a727-ea4e-4cf7-88b7-872c1fdcd1bd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/controller/ContactMessagesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/dto/request/CreateContactMessageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/dto/response/ContactMessagesResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/ContactStatusConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/repository/ContactMessagesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/ContactMessagesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/controller/LogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/ContactMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/ContactMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/controller/LogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/controller/LogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/service/UserService.class" afterDir="false" />
+    </list>
+>>>>>>> Backend
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -18,10 +45,93 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3Kj53X4dcc7vxjvA5C6zYsUdvDj" />
+=======
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="2.800002936170317E-8" />
+      <entry key="MS500" value="0.033198112460746255" />
+      <entry key="S2" value="0.6389989394107555" />
+      <entry key="S5" value="1.2659909060504322" />
+      <entry key="S10" value="1.698193457123607" />
+      <entry key="S30" value="2.33976759932895" />
+      <entry key="S60" value="2.623722105599274" />
+      <entry key="M2" value="2.7982559368715525" />
+      <entry key="M5" value="2.915728881366336" />
+      <entry key="M10" value="2.9572410809470586" />
+      <entry key="M15" value="2.971353392479542" />
+      <entry key="M30" value="2.985605823322597" />
+      <entry key="H1" value="2.9927850910240092" />
+      <entry key="H2" value="2.9963880774856073" />
+      <entry key="H4" value="2.9981929201236723" />
+      <entry key="D1" value="2.9996986645197845" />
+      <entry key="W1" value="2.999956948264283" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000008027" />
+      <entry key="S2" value="1.0014468603246136" />
+      <entry key="S5" value="1.138957491789006" />
+      <entry key="S10" value="1.712845687519342" />
+      <entry key="S30" value="3.2266317388122503" />
+      <entry key="S60" value="3.980224651353608" />
+      <entry key="M2" value="4.451457673637476" />
+      <entry key="M5" value="4.77051337970747" />
+      <entry key="M10" value="4.8835074820395175" />
+      <entry key="M15" value="4.92194416987738" />
+      <entry key="M30" value="4.960773631215218" />
+      <entry key="H1" value="4.980336942066396" />
+      <entry key="H2" value="4.990155969981047" />
+      <entry key="H4" value="4.995074855634526" />
+      <entry key="D1" value="4.999178707625132" />
+      <entry key="W1" value="4.999882661860751" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="6.96004776968824E-8" />
+      <entry key="MS500" value="0.056553080065225754" />
+      <entry key="S2" value="0.9135650400160169" />
+      <entry key="S5" value="1.9099871830795259" />
+      <entry key="S10" value="3.034230772738107" />
+      <entry key="S30" value="5.351748221111265" />
+      <entry key="S60" value="6.475452530169699" />
+      <entry key="M2" value="7.178899545828207" />
+      <entry key="M5" value="7.656143646645805" />
+      <entry key="M10" value="7.825385708448231" />
+      <entry key="M15" value="7.882984582067165" />
+      <entry key="M30" value="7.941187069435329" />
+      <entry key="H1" value="7.970516799388556" />
+      <entry key="H2" value="7.985239161848764" />
+      <entry key="H4" value="7.992614764694271" />
+      <entry key="D1" value="7.998768457952894" />
+      <entry key="W1" value="7.999824049018512" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3LuPXhgup915clxN5nAco0uySZQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+>>>>>>> Backend
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
@@ -50,6 +160,33 @@
       <recent name="C:\Users\Varga Zalán\Documents\Vizsgaremek\Vizsgaremek-projekt\Backend" />
     </key>
   </component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Backend&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Varga Zalán/Documents/Vizsgaremek/Vizsgaremek-projekt/Backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  }
+}</component>
+>>>>>>> Backend
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -60,15 +197,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="256ea715-36fc-485f-9aea-883874dc4137" name="Changes" comment="" />
       <created>1792057937850</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792057937850</updated>
+=======
+      <changelist id="67a3a727-ea4e-4cf7-88b7-872c1fdcd1bd" name="Changes" comment="" />
+      <created>1794301021047</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794301021047</updated>
+>>>>>>> Backend
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+>>>>>>> Backend
 </project>
