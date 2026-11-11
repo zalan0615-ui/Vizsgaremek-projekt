@@ -5,6 +5,7 @@ import jakarta.persistence.EntityManager;               // a JPA fő eszköze az
 import jakarta.persistence.ParameterMode;               // paraméter iránya (IN = bemenet)
 import jakarta.persistence.StoredProcedureQuery;        // tárolt eljárás hívása (nem SQL, hanem az eljárás neve)
 import lombok.RequiredArgsConstructor;                  // konstruktort csinál a final mezőből
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.stereotype.Repository;       // jelzi: ez egy Repository
 
 import java.util.List;

@@ -3,6 +3,8 @@ package com.gymforge.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import jakarta.persistence.Convert;
+
 import java.time.LocalDateTime;
 
 //----------------------------------------------------------------------------------------------------//
@@ -32,7 +34,7 @@ public class ContactMessages {
     private String message;
 
     @Builder.Default
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = ContactStatusConverter.class)
     @Column(name = "Status", nullable = false)
     private ContactStatus status = ContactStatus.NEW;
 
