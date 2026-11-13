@@ -59,7 +59,7 @@
             <scope>runtime</scope>
         </dependency>
 
-    <!--    Ha van hiba itt van! -->
+    <!--    Email-hez -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

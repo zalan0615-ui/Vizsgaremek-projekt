@@ -8,27 +8,20 @@
     <list default="true" id="256ea715-36fc-485f-9aea-883874dc4137" name="Changes" comment="" />
 =======
     <list default="true" id="67a3a727-ea4e-4cf7-88b7-872c1fdcd1bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/controller/ContactMessagesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/dto/request/CreateContactMessageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/dto/response/ContactMessagesResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/ContactStatusConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/repository/ContactMessagesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/ContactMessagesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/MiHogyanMukodik.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/controller/PayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/dto/request/CreatePayRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/dto/response/PayResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/PaymentStatusConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/repository/PayRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/PayService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/controller/LogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/ContactMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/ContactMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/controller/LogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/controller/LogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/Pays.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/gymforge/model/Pays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/model/Pays.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/target/classes/com/gymforge/model/Pays.class" afterDir="false" />
     </list>
 >>>>>>> Backend
     <option name="SHOW_DIALOG" value="false" />
