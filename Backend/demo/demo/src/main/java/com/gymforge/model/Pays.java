@@ -35,7 +35,7 @@ public class Pays {
     private BigDecimal price;
 
     @Builder.Default
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = PaymentStatusConverter.class)
     @Column(name = "status", nullable = false)
     private PaymentStatus status = PaymentStatus.UNPAID;
 
