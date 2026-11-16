@@ -1,11 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="hu">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#050505" name="theme-color"/>
+  <title>
+   Bejelentkezés | FORGE Budapest
+  </title>
+  <link href="../mindegyik oldalhoz/General.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body data-page="login">
+  <header id="site-header">
+  </header>
+  <main class="page-main">
+   <div class="container auth-frame">
+    <section class="auth-panel auth-login">
+     <div class="auth-lead">
+      <a class="back-link" href="../Kezdőlap/Homepage.html">
+       ← Vissza
+      </a>
+      <span class="eyebrow">
+       BEJELENTKEZÉS
+      </span>
+      <h1>
+       LÉPJ BE
+       <br/>
+       <span class="lime">
+        ÚJRA.
+       </span>
+      </h1>
+      <p>
+       Kezeld tagságod, bérleted és foglalásaid egyetlen letisztult felületen.
+      </p>
+      <div class="auth-benefits">
+       <div>
+        <b>
+         ●
+        </b>
+        <span>
+         <strong>
+          GYORS BELÉPÉS
+         </strong>
+         <small>
+          Pár kattintással elérheted a fiókodat.
+         </small>
+        </span>
+       </div>
+       <div>
+        <b>
+         ●
+        </b>
+        <span>
+         <strong>
+          0–24 HOZZÁFÉRÉS
+         </strong>
+         <small>
+          Bérletek, órák és órarend egy helyen.
+         </small>
+        </span>
+       </div>
+       <div>
+        <b>
+         ●
+        </b>
+        <span>
+         <strong>
+          PRÉMIUM ÉLMÉNY
+         </strong>
+         <small>
+          Ugyanaz a vizuális világ, mint a teljes oldalon.
+         </small>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="auth-form-column">
+      <form class="auth-box" id="login-form">
+       <h2>
+        BEJELENTKEZÉS
+       </h2>
+       <p>
+        Jelentkezz be a Forge Budapest fiókodba
+       </p>
+       <div class="field">
+        <label for="email">
+         FELHASZNÁLÓNÉV VAGY E-MAIL
+        </label>
+        <input id="email" placeholder="pelda@gmail.com" required="" type="email"/>
+       </div>
+       <div class="field">
+        <label for="password">
+         JELSZÓ
+        </label>
+        <div class="password-wrap">
+         <input id="password" placeholder="••••••••" required="" type="password"/>
+         <button aria-label="Jelszó mutatása" class="show-password" type="button">
+          ◉
+         </button>
+        </div>
+       </div>
+       <div class="auth-check">
+        <label class="checkbox-row">
+         <input checked="" type="checkbox"/>
+         Emlékezz rám
+        </label>
+        <a href="#" id="forgot-password">
+         Elfelejtetted a jelszavad?
+        </a>
+       </div>
+       <button class="btn auth-submit" type="submit">
+        BELÉPÉS
+       </button>
+       <p aria-live="polite" class="form-error" id="login-message">
+       </p>
+       <div class="auth-sep">
+        VAGY
+       </div>
+       <div class="auth-register">
+        <span>
+         NINCS MÉG FIÓKOD?
+        </span>
+        <a href="../Regisztráció/Registration.html">
+         REGISZTRÁLJ
+        </a>
+        <a class="admin-direct" href="../Adminpanel bejelentkezés/Admin_login.html">
+         ADMIN
+        </a>
+       </div>
+      </form>
+     </div>
+    </section>
+   </div>
+  </main>
+  <footer id="site-footer">
+  </footer>
+  <script src="../mindegyik oldalhoz/mindegyikhez.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
 </html>
