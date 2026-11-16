@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b246802e-048f-463f-9170-bc73d85b5ee2" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/gymforge/controller/ImageController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/gymforge/dto/request/ImageRequest.java" afterDir="false" />
@@ -26,11 +27,15 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/gymforge/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymforge/exception/GlobalExceptionHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/gymforge/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gymforge/service/UserService.class" afterDir="false" />
     </list>
+=======
+    <list default="true" id="39c39a5b-e129-410d-8440-4774fbbced34" name="Changes" comment="" />
+>>>>>>> Database
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -110,10 +115,21 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+=======
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="3LuOlzJIcUMz7Q9kw3C0OiVyElJ" />
+>>>>>>> Database
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
@@ -140,6 +156,27 @@
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
 }</component>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Varga Zalán/Documents/Vizsgaremek/Vizsgaremek-projekt/Backend/demo/demo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+>>>>>>> Database
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -150,11 +187,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="b246802e-048f-463f-9170-bc73d85b5ee2" name="Changes" comment="" />
       <created>1792061407769</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1792061407769</updated>
+=======
+      <changelist id="39c39a5b-e129-410d-8440-4774fbbced34" name="Changes" comment="" />
+      <created>1794300640748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794300640748</updated>
+>>>>>>> Database
     </task>
     <servers />
   </component>
