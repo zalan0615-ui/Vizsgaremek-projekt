@@ -89,8 +89,7 @@ public class ContactMessagesService {
         return toResponse(findContactMessage(id));
     }
 
-    //--------------------------------------------------------------------------
-    // Törlés
+
 
 
 
