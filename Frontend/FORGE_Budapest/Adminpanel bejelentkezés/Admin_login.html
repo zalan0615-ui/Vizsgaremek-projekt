@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="hu">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#050505" name="theme-color"/>
+  <title>
+   Admin bejelentkezés | FORGE Budapest
+  </title>
+  <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../mindegyik oldalhoz/General.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body data-bs-theme="dark" data-page="adminLogin">
+  <header id="site-header">
+  </header>
+  <main class="page-main">
+   <div class="container auth-frame admin-auth-page">
+    <section class="auth-panel auth-login row g-4">
+     <div class="auth-lead col-12 col-lg-6">
+      <a class="back-link" href="../Bejelentkezés/Login.html">
+       ← Vissza
+      </a>
+      <span class="eyebrow">
+       ADMIN FELÜLET
+      </span>
+      <h1>
+       FORGE
+       <br/>
+       <span class="lime">
+        ADMIN.
+       </span>
+      </h1>
+      <p>
+       Felhasználók, bérletek, órák és foglalások egyetlen adminisztrációs felületen.
+      </p>
+      <div class="auth-benefits">
+       <div>
+        <b>
+         ●
+        </b>
+        <span>
+         <strong>
+          FELHASZNÁLÓK
+         </strong>
+         <small>
+          Regisztrált tagok kezelése.
+         </small>
+        </span>
+       </div>
+       <div>
+        <b>
+         ●
+        </b>
+        <span>
+         <strong>
+          BÉRLETEK ÉS FIZETÉSEK
+         </strong>
+         <small>
+          Aktív tagságok és fizetési állapotok.
+         </small>
+        </span>
+       </div>
+       <div>
+        <b>
+         ●
+        </b>
+        <span>
+         <strong>
+          ÓRÁK ÉS FOGLALÁSOK
+         </strong>
+         <small>
+          Foglalkozások áttekintése.
+         </small>
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="auth-form-column col-12 col-lg-6">
+      <form class="auth-box" id="admin-login">
+       <span class="eyebrow">
+        BIZTONSÁGOS BELÉPÉS / DEMÓ
+       </span>
+       <h2>
+        ADMIN
+        <br/>
+        BEJELENTKEZÉS
+       </h2>
+       <p>
+        Jelentkezz be a kezelőfelületre
+       </p>
+       <div class="field mb-3">
+        <label for="admin-name">
+         FELHASZNÁLÓNÉV
+        </label>
+        <input autocomplete="username" class="form-control" id="admin-name" placeholder="admin" required=""/>
+       </div>
+       <div class="field mb-3">
+        <label for="admin-password">
+         JELSZÓ
+        </label>
+        <div class="password-wrap">
+         <input autocomplete="current-password" class="form-control" id="admin-password" placeholder="••••••••" required="" type="password"/>
+         <button aria-label="Jelszó megjelenítése" class="show-password" type="button">
+          ◉
+         </button>
+        </div>
+       </div>
+       <button class="btn auth-submit" type="submit">
+        BELÉPÉS
+       </button>
+       <p class="form-error" id="admin-error" role="status">
+       </p>
+       <div class="demo-hint">
+        Demó belépés:
+        <b>
+         admin / forge123
+        </b>
+       </div>
+       <div class="auth-sep">
+        VAGY
+       </div>
+       <div class="auth-register">
+        <a href="../Bejelentkezés/Login.html">
+         Vissza a tagi belépéshez
+        </a>
+       </div>
+      </form>
+     </div>
+    </section>
+   </div>
+  </main>
+  <footer id="site-footer">
+  </footer>
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js">
+  </script>
+  <script src="../mindegyik oldalhoz/mindegyikhez.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
+</html>

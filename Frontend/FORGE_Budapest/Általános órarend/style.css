@@ -1,0 +1,132 @@
+.schedule-page .page-heading {
+    padding-top:39px;
+    padding-bottom:10px
+}
+.schedule-page h1 {
+    font-size:clamp(57px,6.3vw,96px)
+}
+.schedule-head-links {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:13px
+}
+.schedule-head-links .btn {
+    min-height:30px;
+    padding:7px 22px;
+    font-size:10px
+}
+.schedule-shell {
+    background:#080808;
+    border:1px solid #303030;
+    border-radius:12px;
+    padding:8px
+}
+.schedule-overflow {
+    overflow-x:auto;
+    scrollbar-color:var(--lime) #161616
+}
+.schedule-board {
+    min-width:850px;
+    display:grid;
+    grid-template-columns:72px repeat(5,minmax(0,1fr));
+    grid-template-rows:34px repeat(26,20px);
+    position:relative;
+    border-top:1px solid #272727;
+    border-left:1px solid #272727
+}
+.schedule-board .cell {
+    border-right:1px solid #282828;
+    border-bottom:1px solid #242424;
+    min-width:0;
+    z-index:0
+}
+.schedule-board .head {
+    font-size:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#111;
+    text-transform:uppercase;
+    color:#c9c9c9;
+    font-weight:750
+}
+.schedule-board .time-cell {
+    font-size:9px;
+    color:#aaa;
+    background:#0d0d0d;
+    padding-left:12px;
+    display:flex;
+    align-items:flex-start
+}
+.schedule-board .time-cell span {
+    transform:translateY(-5px)
+}
+.schedule-board .schedule-event {
+    margin:2px 4px;
+    z-index:2;
+    position:relative;
+    border:0;
+    border-radius:7px;
+    color:#fff;
+    box-shadow:0 4px 8px #0007;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:2px;
+    font-size:11px;
+    line-height:1.1;
+    overflow:hidden;
+    text-align:center;
+    padding:4px
+}
+.schedule-board .schedule-event strong {
+    font-weight:650;
+    font-size:11px
+}
+.schedule-board .schedule-event small {
+    font-size:9px;
+    color:#e7e7e7
+}
+.schedule-board .schedule-event:hover {
+    filter:brightness(1.15);
+    outline:1px solid #eee
+}
+.schedule-legend {
+    border:1px solid #252525;
+    background:#090909;
+    padding:13px 18px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    font-size:10px;
+    color:#a3a3a3
+}
+.schedule-legend span {
+    display:flex;
+    align-items:center;
+    gap:7px
+}
+.schedule-legend i {
+    width:12px;
+    height:12px;
+    display:block
+}
+@media(max-width:600px) {
+    .schedule-page .page-heading {
+        padding-top:23px
+    }
+    .schedule-legend {
+        gap:12px
+    }
+    .schedule-board {
+        min-width:790px
+    }
+}
+
+/* A jelmagyarázat színei külön CSS-ben vannak. */
+.schedule-legend .legend-1 { background:#aa4176; }
+.schedule-legend .legend-2 { background:#4c8d39; }
+.schedule-legend .legend-3 { background:#bf4e08; }
+.schedule-legend .legend-4 { background:#7a1dca; }

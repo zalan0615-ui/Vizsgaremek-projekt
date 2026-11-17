@@ -1,2 +1,0 @@
-document.querySelector('.show-password').onclick=()=>{let i=document.querySelector('#admin-password');i.type=i.type==='password'?'text':'password'};
-document.querySelector('#admin-login').onsubmit=e=>{e.preventDefault();if(document.querySelector('#admin-name').value==='admin'&&document.querySelector('#admin-password').value==='forge123'){FORGE.store.set('adminSession',true);location.href=FORGE.url('admin')}else document.querySelector('#admin-error').textContent='Hibás demó bejelentkezési adatok!'};

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="hu">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#050505" name="theme-color"/>
+  <title>
+   Kapcsolat | FORGE Budapest
+  </title>
+  <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+  <link href="../mindegyik oldalhoz/General.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body data-bs-theme="dark" data-page="contact">
+  <header id="site-header">
+  </header>
+  <main class="page-main">
+   <div class="container contact-page">
+    <section class="page-heading mb-2">
+     <span class="eyebrow">
+      KAPCSOLAT
+     </span>
+     <h1>
+      LÉPJ VELÜNK
+      <br/>
+      <span class="lime">
+       KAPCSOLATBA.
+      </span>
+     </h1>
+     <p class="intro-copy">
+      Kérdésed van a bérletekről, a próbaóráról vagy az edzőkről?
+      <br/>
+      Írj nekünk vagy ugorj be személyesen.
+     </p>
+    </section>
+    <div class="contact-columns row g-3">
+     <div class="col-12 col-lg-6">
+      <form class="contact-card h-100" id="contact-form">
+       <h3>
+        ÍRJ NEKÜNK
+       </h3>
+       <div class="field mb-3">
+        <label class="sr-only" for="name">
+         Név
+        </label>
+        <input class="form-control" id="name" placeholder="Név" required=""/>
+       </div>
+       <div class="field mb-3">
+        <label class="sr-only" for="email">
+         E-mail cím
+        </label>
+        <input class="form-control" id="email" placeholder="E-mail cím" required="" type="email"/>
+       </div>
+       <div class="field mb-3">
+        <label class="sr-only" for="message">
+         Üzenet
+        </label>
+        <textarea class="form-control" id="message" placeholder="Üzenet" required=""></textarea>
+       </div>
+       <button class="btn" type="submit">
+        ÜZENET KÜLDÉSE
+       </button>
+       <div class="form-error" id="contact-result" role="status">
+       </div>
+      </form>
+     </div>
+     <div class="col-12 col-lg-6">
+      <aside class="contact-card h-100">
+       <h3>
+        ELÉRHETŐSÉGEK
+       </h3>
+       <div class="contact-details">
+        <div>
+         <span>
+          CÍM
+         </span>
+         <p>
+          Budapest, XI. kerület, Váci út 88.
+          <br/>
+          <small>
+           Bemutató helyszín
+          </small>
+         </p>
+        </div>
+        <div>
+         <span>
+          NYITVATARTÁS
+         </span>
+         <p>
+          0–24 minden nap
+         </p>
+        </div>
+        <div>
+         <span>
+          TELEFON
+         </span>
+         <p>
+          +36 30 123 4567
+         </p>
+        </div>
+        <div>
+         <span>
+          E-MAIL
+         </span>
+         <p>
+          hello@forgebudapest.hu
+         </p>
+        </div>
+        <div aria-label="Térkép helye" class="map-placeholder">
+         Google Map helye
+        </div>
+       </div>
+      </aside>
+     </div>
+    </div>
+   </div>
+  </main>
+  <footer id="site-footer">
+  </footer>
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js">
+  </script>
+  <script src="../mindegyik oldalhoz/mindegyikhez.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
