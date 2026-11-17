@@ -1,0 +1,105 @@
+.personal-page .page-heading {
+    padding-top:30px;
+    padding-bottom:29px
+}
+.personal-page h1 {
+    font-size:clamp(58px,6.1vw,91px)
+}
+.personal-table-shell {
+    background:#161616;
+    border:1px solid #333;
+    border-radius:3px
+}
+.personal-table-scroll {
+    overflow-x:auto
+}
+.personal-table {
+    width:100%;
+    min-width:850px;
+    border-collapse:collapse;
+    table-layout:fixed
+}
+.personal-table th,.personal-table td {
+    border-right:1px solid #303030;
+    border-bottom:1px solid #303030;
+    text-align:center;
+    height:82px;
+    font-size:12px;
+    font-weight:500;
+    color:#bcbcbc
+}
+.personal-table th:first-child {
+    width:174px
+}
+.personal-table thead th {
+    height:70px;
+    font-size:11px;
+    color:var(--lime);
+    background:#121212;
+    font-weight:800
+}
+.personal-table thead th:first-child {
+    color:#111;
+    background:var(--lime);
+    font-size:11px;
+    line-height:1.3
+}
+.personal-table tbody th {
+    padding:15px 9px;
+    display:flex;
+    align-items:center;
+    gap:13px;
+    text-align:left;
+    color:#eaeaea;
+    font-size:12px;
+    font-weight:750
+}
+.coach-avatar {
+    width:48px;
+    height:48px;
+    border:1px solid var(--lime);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    color:var(--lime);
+    font-size:22px;
+    flex-shrink:0
+}
+.personal-table tbody tr:last-child>* {
+    border-bottom:0
+}
+.personal-bookings {
+    margin:18px 0 0;
+    padding:20px
+}
+.personal-bookings-head {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px
+}
+.personal-bookings-head h3 {
+    font-size:25px
+}
+.my-lesson {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:14px;
+    padding:13px;
+    border:1px solid #303030;
+    border-radius:7px;
+    margin-top:8px
+}
+.my-lesson p {
+    font-size:11px;
+    color:#aaa;
+    margin-top:5px
+}
+.my-lesson strong {
+    font-size:12px
+}
+.my-lesson .btn {
+    min-height:29px;
+    padding:7px 13px
+}

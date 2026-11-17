@@ -1,11 +1,393 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="hu">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="#050505" name="theme-color"/>
+  <title>
+   Adminpanel | FORGE Budapest
+  </title>
+  <link href="../mindegyik oldalhoz/General.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body class="admin-body" data-page="admin">
+  <header id="site-header">
+  </header>
+  <main class="admin-main">
+   <div class="container admin-app">
+    <aside class="admin-sidebar">
+     <span class="eyebrow">
+      ADMIN MENÜ
+     </span>
+     <nav aria-label="Admin menü" class="admin-links">
+      <button class="admin-nav active" data-panel="dashboard" type="button">
+       Dashboard
+      </button>
+      <button class="admin-nav" data-panel="users" type="button">
+       Felhasználók
+      </button>
+      <button class="admin-nav" data-panel="passes" type="button">
+       Bérletek és fizetések
+      </button>
+      <button class="admin-nav" data-panel="lessons" type="button">
+       Órák és foglalások
+      </button>
+     </nav>
+     <div class="admin-side-info">
+      <h4>
+       Adatbázis háttér
+      </h4>
+      <p>
+       user
+       <br/>
+       memberships / pay
+       <br/>
+       classes / bookings
+      </p>
+     </div>
+     <div class="admin-side-bottom">
+      <span>
+       Admin
+      </span>
+      <button class="btn btn-outline" id="admin-logout">
+       KIJELENTKEZÉS
+      </button>
+     </div>
+    </aside>
+    <div class="admin-content">
+     <section class="admin-pane" id="panel-dashboard">
+      <div class="admin-intro">
+       <span class="eyebrow">
+        ADMIN KEZELŐFELÜLET
+       </span>
+       <h1>
+        ADMIN DASHBOARD
+       </h1>
+       <p>
+        Csak a három legfontosabb adminisztrációs terület maradt a bal oldali menüben.
+       </p>
+      </div>
+      <div class="admin-stats">
+       <div class="admin-stat">
+        <span>
+         FELHASZNÁLÓK
+        </span>
+        <strong id="members-stat">
+         1 248
+        </strong>
+        <small>
+         ↑ 173 aktív profil
+        </small>
+       </div>
+       <div class="admin-stat">
+        <span>
+         AKTÍV BÉRLETEK
+        </span>
+        <strong id="passes-stat">
+         816
+        </strong>
+        <small>
+         ↑ 64 új bérlet
+        </small>
+       </div>
+       <div class="admin-stat">
+        <span>
+         MAI FOGLALÁSOK
+        </span>
+        <strong id="bookings-stat">
+         94
+        </strong>
+        <small>
+         ↑ csoportos óra ma
+        </small>
+       </div>
+      </div>
+      <div class="admin-dashboard-card surface">
+       <h3>
+        A három fő admin terület
+       </h3>
+       <p>
+        A kezelőfelület közvetlenül a három legfontosabb táblához kapcsolódik.
+       </p>
+       <div class="admin-landing-grid">
+        <article>
+         <div class="line">
+         </div>
+         <h4>
+          Felhasználók
+         </h4>
+         <p>
+          Profilok, státuszok, e-mail, aktivitás és törölt fiókok kezelése.
+         </p>
+         <small>
+          user · images · user_tokens
+         </small>
+         <button class="btn btn-outline" data-goto="users">
+          MEGNYITÁS
+         </button>
+        </article>
+        <article>
+         <div class="line">
+         </div>
+         <h4>
+          Bérletek és fizetések
+         </h4>
+         <p>
+          Bérlettípusok, vásárlások, aktív fizetési státuszok és kiadások kezelése.
+         </p>
+         <small>
+          memberships · user_memberships · pays
+         </small>
+         <button class="btn btn-outline" data-goto="passes">
+          MEGNYITÁS
+         </button>
+        </article>
+        <article>
+         <div class="line">
+         </div>
+         <h4>
+          Órák és foglalások
+         </h4>
+         <p>
+          Foglalkozások, időpontok, termek, edzők és jelentkezések kezelése.
+         </p>
+         <small>
+          classes · class_schedules · class_bookings
+         </small>
+         <button class="btn btn-outline" data-goto="lessons">
+          MEGNYITÁS
+         </button>
+        </article>
+       </div>
+      </div>
+     </section>
+     <section class="admin-pane hide" id="panel-users">
+      <div class="admin-intro">
+       <span class="eyebrow">
+        ADMIN KEZELŐFELÜLET
+       </span>
+       <h1>
+        FELHASZNÁLÓK
+       </h1>
+       <p>
+        Felhasználói fiókok, státuszok és alapadatok kezelése.
+       </p>
+      </div>
+      <div class="admin-panel-body surface">
+       <h3>
+        Keresés és szűrés
+       </h3>
+       <div class="admin-toolbar">
+        <input class="search" id="user-search" placeholder="Név vagy e-mail keresése..."/>
+        <select id="user-status">
+         <option value="all">
+          Összes státusz
+         </option>
+         <option value="Aktív">
+          Aktív
+         </option>
+         <option value="Inaktív">
+          Inaktív
+         </option>
+        </select>
+        <button class="btn" id="add-user" type="button">
+         + ÚJ FELHASZNÁLÓ
+        </button>
+       </div>
+      </div>
+      <div class="admin-panel-body surface">
+       <h3>
+        Felhasználói lista
+       </h3>
+       <p>
+        A user tábla fő mezői: username, email, is_admin, is_deleted.
+       </p>
+       <div class="table-scroll">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            ID
+           </th>
+           <th>
+            FELHASZNÁLÓNÉV
+           </th>
+           <th>
+            E-MAIL
+           </th>
+           <th>
+            STÁTUSZ
+           </th>
+           <th>
+            MŰVELET
+           </th>
+          </tr>
+         </thead>
+         <tbody id="user-rows">
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </section>
+     <section class="admin-pane hide" id="panel-passes">
+      <div class="admin-intro">
+       <span class="eyebrow">
+        ADMIN KEZELŐFELÜLET
+       </span>
+       <h1>
+        BÉRLETEK ÉS FIZETÉSEK
+       </h1>
+       <p>
+        Bérlettípusok, felhasználói bérletek és fizetési státuszok kezelése.
+       </p>
+      </div>
+      <div class="admin-stats">
+       <div class="admin-stat">
+        <span>
+         AKTÍV BÉRLETEK
+        </span>
+        <strong>
+         816
+        </strong>
+        <small>
+         active
+        </small>
+       </div>
+       <div class="admin-stat">
+        <span>
+         FÜGGŐBEN
+        </span>
+        <strong>
+         64
+        </strong>
+        <small>
+         pending, payment required
+        </small>
+       </div>
+       <div class="admin-stat">
+        <span>
+         MAI BEVÉTEL
+        </span>
+        <strong>
+         312 400 Ft
+        </strong>
+        <small>
+         cash
+        </small>
+       </div>
+      </div>
+      <div class="admin-panel-body surface">
+       <h3>
+        Bérletek és fizetési állapotok
+       </h3>
+       <p>
+        membership + user_memberships + pays
+       </p>
+       <div class="table-scroll">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            FELHASZNÁLÓ
+           </th>
+           <th>
+            BÉRLET
+           </th>
+           <th>
+            ÁR
+           </th>
+           <th>
+            FIZETÉS
+           </th>
+           <th>
+            STÁTUSZ
+           </th>
+           <th>
+            MŰVELET
+           </th>
+          </tr>
+         </thead>
+         <tbody id="pass-rows">
+         </tbody>
+        </table>
+       </div>
+      </div>
+     </section>
+     <section class="admin-pane hide" id="panel-lessons">
+      <div class="admin-intro">
+       <span class="eyebrow">
+        ADMIN KEZELŐFELÜLET
+       </span>
+       <h1>
+        ÓRÁK ÉS FOGLALÁSOK
+       </h1>
+       <p>
+        Csoportos foglalkozások, időpontok és felhasználói jelentkezések kezelése.
+       </p>
+      </div>
+      <div class="admin-panel-body surface">
+       <h3>
+        Óra létrehozása
+       </h3>
+       <p>
+        Foglalkozás neve, edző, terem és kezdés
+       </p>
+       <form class="admin-toolbar" id="quick-lesson">
+        <input name="title" placeholder="Foglalkozás neve" required=""/>
+        <input name="trainer" placeholder="Edző" required=""/>
+        <input name="room" placeholder="Terem" required=""/>
+        <input name="time" required="" type="time" value="17:00"/>
+        <button class="btn" type="submit">
+         + ÚJ ÓRA HOZZÁADÁSA
+        </button>
+       </form>
+      </div>
+      <div class="admin-class-columns">
+       <div class="admin-panel-body surface">
+        <h3>
+         Csoportos órák
+        </h3>
+        <p>
+         classes + class_schedules
+        </p>
+        <div id="lesson-rows">
+        </div>
+       </div>
+       <div class="admin-panel-body surface">
+        <h3>
+         Foglalások
+        </h3>
+        <p>
+         class_bookings
+        </p>
+        <div class="table-scroll">
+         <table>
+          <thead>
+           <tr>
+            <th>
+             FELHASZNÁLÓ
+            </th>
+            <th>
+             ÓRA
+            </th>
+            <th>
+             DÁTUM
+            </th>
+           </tr>
+          </thead>
+          <tbody id="admin-booking-rows">
+          </tbody>
+         </table>
+        </div>
+       </div>
+      </div>
+     </section>
+    </div>
+   </div>
+  </main>
+  <script src="../mindegyik oldalhoz/mindegyikhez.js">
+  </script>
+  <script src="script.js">
+  </script>
+ </body>
 </html>
