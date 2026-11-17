@@ -1,7 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7f491b1-3af6-49f7-ac3f-f6c7f30572f0" name="Changes" comment="" />
+    <list default="true" id="f60a7732-5711-4d8e-88f6-c265acfc63c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/.idea/.idea.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/.idea/.idea.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/Backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/Backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/MiketKellmajdmegnéznem" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/MiketKellmajdmegnéznem" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/MiHogyanMukodik.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/MiHogyanMukodik.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/config/PasswordConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/config/PasswordConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/ContactMessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/ContactMessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/GymInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/GymInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/LogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/PayController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/TrainerSchedulesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/TrainerSchedulesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/UserTokensController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/controller/UserTokensController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateAdminRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateAdminRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateContactMessageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateContactMessageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreatePayRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreatePayRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateTrainerSchedulesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateTrainerSchedulesRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/CreateUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/ImageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/ImageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateAdminRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateAdminRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateGymInfoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateGymInfoRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateTrainerSchedulesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateTrainerSchedulesRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateUserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/request/UpdateUserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/AdminResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/AdminResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/ContactMessagesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/ContactMessagesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/GymInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/GymInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/ImageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/ImageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/LogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/LogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/PayResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/PayResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/TrainerSchedulesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/TrainerSchedulesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/UserTokensResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/dto/response/UserTokensResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/exception/DuplicateResourceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/exception/DuplicateResourceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ClassBookings.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ClassBookings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ClassName.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ClassName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ClassSchedules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ClassSchedules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Classes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Classes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ContactMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ContactMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ContactStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ContactStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ContactStatusConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/ContactStatusConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/GymInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/GymInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/MembershipStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/MembershipStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Memberships.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Memberships.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/PaymentMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/PaymentMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/PaymentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/PaymentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/PaymentStatusConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/PaymentStatusConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Pays.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Pays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/RoomType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/TrainerSchedules.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/TrainerSchedules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/TransactionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/TransactionStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Transactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/Transactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/UserMemberships.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/UserMemberships.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/UserTokens.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/UserTokens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/UserXTrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/model/UserXTrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/AdminRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/AdminRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/ContactMessagesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/ContactMessagesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/GymInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/GymInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/LogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/LogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/PayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/PayRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/TrainerSchedulesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/TrainerSchedulesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/UserTokensRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/repository/UserTokensRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/security/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/security/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/ContactMessagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/ContactMessagesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/GymInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/GymInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/PayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/PayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/TrainerSchedulesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/TrainerSchedulesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/UserTokensService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/java/com/gymforge/service/UserTokensService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/demo/demo/target/classes/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/demo/demo/target/classes/application.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +133,7 @@
   "customColor": "",
   "associatedIndex": 0
 }]]></component>
-  <component name="ProjectId" id="3MCBFkyu1fSGiQPmEJYpACJAhKj" />
+  <component name="ProjectId" id="3MEHGQBjU4UCq0bTTTlr7x0MRFc" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,13 +145,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "to.speed.mode.migration.done": "true"
+    "git-widget-placeholder": "main"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -43,15 +158,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c7f491b1-3af6-49f7-ac3f-f6c7f30572f0" name="Changes" comment="" />
-      <created>1794844570851</created>
+      <changelist id="f60a7732-5711-4d8e-88f6-c265acfc63c2" name="Changes" comment="" />
+      <created>1794908713047</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1794844570851</updated>
+      <updated>1794908713047</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
 </project>
