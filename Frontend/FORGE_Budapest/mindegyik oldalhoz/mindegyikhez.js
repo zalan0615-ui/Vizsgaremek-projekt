@@ -159,3 +159,34 @@ FORGE.lessons = [
 FORGE.getLessons = () =>FORGE.store.get('adminLessons',FORGE.lessons);FORGE.getBookings = () =>FORGE.store.get('bookings',[]);
 FORGE.bookLesson = id =>{if(!FORGE.store.get('session',null)){FORGE.notify('Foglaláshoz előbb be kell jelentkezni.');location.href=FORGE.url('login');return}let b=FORGE.getBookings();if(b.includes(id)){FORGE.notify('Ezt az órát már lefoglaltad.');return}FORGE.store.set('bookings',[...b,id]);FORGE.notify('Sikeres demófoglalás!')};
 
+
+/* KÖZÖS FRONTEND SEGÉDFÜGGVÉNYEK */
+
+window.ForgeUI = {
+    setText(id, value) {
+        const element = document.getElementById(id);
+
+        if (!element) return;
+
+        element.textContent =
+            value === null ||
+            value === undefined ||
+            value === ""
+                ? "—"
+                : String(value);
+    },
+
+    formatNumber(value) {
+        if (value === null ||
+            value === undefined ||
+            value === "") {
+            return "—";
+        }
+
+        const number = Number(value);
+
+        return Number.isFinite(number)
+            ? number.toLocaleString("hu-HU")
+            : "—";
+    }
+};
