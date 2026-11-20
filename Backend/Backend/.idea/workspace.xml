@@ -10,13 +10,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -86,10 +79,10 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0,
+  &quot;associatedIndex&quot;: 1,
   &quot;fromUser&quot;: false
 }</component>
-  <component name="ProjectId" id="3LuPXhgup915clxN5nAco0uySZQ" />
+  <component name="ProjectId" id="3MEHIpydOQkxJEBW7iVsQOf7ONg" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -134,11 +127,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="67a3a727-ea4e-4cf7-88b7-872c1fdcd1bd" name="Changes" comment="" />
-      <created>1794301021047</created>
+      <changelist id="75ec6db3-88ec-4bc5-9dd1-f4d4fd3fe834" name="Changes" comment="" />
+      <created>1794908729770</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1794301021047</updated>
+      <updated>1794908729770</updated>
     </task>
     <servers />
   </component>

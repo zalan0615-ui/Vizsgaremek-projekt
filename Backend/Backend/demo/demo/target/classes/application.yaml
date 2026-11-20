@@ -4,8 +4,8 @@ spring:
 
   datasource:
     url: jdbc:mysql://localhost:8889/gym_forge_budapest?useUnicode=true&characterEncoding=utf8&serverTimezone=Europe/Budapest
-    username: gymforge_app
-    password: fdsiciubib!fd43
+    username: root
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
