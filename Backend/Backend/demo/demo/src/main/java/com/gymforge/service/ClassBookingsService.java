@@ -22,8 +22,8 @@ public class ClassBookingsService {
 
     private final ClassBookingsRepository classBookingsRepository;
 
-    //----------------------------------------------------------------------------
-    // Létrehozás (createclass_bookings eljárás)
+//-----------------------------------------------------------------------------
+//CreateClassBooking
 
     @Transactional
     public ClassBookingsResponse createClassBooking(CreateClassBookingsRequest request) {
@@ -34,7 +34,7 @@ public class ClassBookingsService {
                 request.getBookingDate()
         );
 
-        // Az eljárás nem ad vissza id-t, ezért a legnagyobb id-jú sort keressük vissza
+
         ClassBookings saved = classBookingsRepository.getAllClassBookings().stream()
                 .max(Comparator.comparing(ClassBookings::getId))
                 .orElseThrow(() -> new ResourceNotFoundException("A foglalás létrehozása nem sikerült"));
@@ -42,7 +42,8 @@ public class ClassBookingsService {
         return toResponse(saved);
     }
 
-    //----------------------------------------------------------------------------
+//-----------------------------------------------------------------------------
+//GetAllClassBooking
 
     public List<ClassBookingsResponse> getAllClassBookings() {
         return classBookingsRepository.getAllClassBookings()
@@ -55,8 +56,9 @@ public class ClassBookingsService {
         return toResponse(findClassBooking(id));
     }
 
-    //----------------------------------------------------------------------------
-    // Módosítás (updateclass_bookings eljárás)
+
+//-----------------------------------------------------------------------------
+//UpdateClassBooking
 
     @Transactional
     public ClassBookingsResponse updateClassBooking(Integer id, UpdateClassBookingsRequest request) {

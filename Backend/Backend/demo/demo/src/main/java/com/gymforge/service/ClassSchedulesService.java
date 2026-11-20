@@ -22,9 +22,8 @@ public class ClassSchedulesService {
 
     private final ClassSchedulesRepository classSchedulesRepository;
 
-    //----------------------------------------------------------------------------
-    // Létrehozás (createclass_schedules eljárás)
-
+//-----------------------------------------------------------------------------
+//CreateClassSchedule
     @Transactional
     public ClassSchedulesResponse createClassSchedule(CreateClassSchedulesRequest request) {
 
@@ -35,7 +34,6 @@ public class ClassSchedulesService {
                 request.getEndTime()
         );
 
-        // Az eljárás nem ad vissza id-t, ezért a legnagyobb id-jú sort keressük vissza
         ClassSchedules saved = classSchedulesRepository.getAllClassSchedules().stream()
                 .max(Comparator.comparing(ClassSchedules::getId))
                 .orElseThrow(() -> new ResourceNotFoundException("Az órarendi bejegyzés létrehozása nem sikerült"));
@@ -43,8 +41,8 @@ public class ClassSchedulesService {
         return toResponse(saved);
     }
 
-    //----------------------------------------------------------------------------
-
+//-----------------------------------------------------------------------------
+//GetAllClassSchedule
     public List<ClassSchedulesResponse> getAllClassSchedules() {
         return classSchedulesRepository.getAllClassSchedules()
                 .stream()
@@ -56,8 +54,8 @@ public class ClassSchedulesService {
         return toResponse(findClassSchedule(id));
     }
 
-    //----------------------------------------------------------------------------
-    // Módosítás (updateclass_schedules eljárás)
+//-----------------------------------------------------------------------------
+//UpdateClassSchedule
 
     @Transactional
     public ClassSchedulesResponse updateClassSchedule(Integer id, UpdateClassSchedulesRequest request) {

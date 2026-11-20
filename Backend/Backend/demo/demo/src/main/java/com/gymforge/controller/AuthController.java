@@ -16,7 +16,6 @@ public class AuthController {
 
     private final JwtUtil jwtUtil;
 
-    // GET /api/auth/test-token -> kiír egy teszt tokent
     @GetMapping("/test-token")
     public String testToken() {
         return jwtUtil.generateToken(1, "teszt@teszt.hu", "USER");

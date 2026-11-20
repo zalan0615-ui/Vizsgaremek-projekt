@@ -19,6 +19,8 @@ public class ClassBookingsController {
 
     private final ClassBookingsService classBookingsService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreateClassBooking
     @PostMapping
     public ResponseEntity<ClassBookingsResponse> createClassBooking(
             @Valid @RequestBody CreateClassBookingsRequest request) {
@@ -26,16 +28,21 @@ public class ClassBookingsController {
                 .body(classBookingsService.createClassBooking(request));
     }
 
+//---------------------------------------------------------------------------------------------------------//
+//GetClassBooking
     @GetMapping
     public ResponseEntity<List<ClassBookingsResponse>> getAllClassBookings() {
         return ResponseEntity.ok(classBookingsService.getAllClassBookings());
     }
 
+//---------------------------------------------------------------------------------------------------------//
+//GetClassBookingById
     @GetMapping("/{id}")
     public ResponseEntity<ClassBookingsResponse> getClassBookingById(@PathVariable Integer id) {
         return ResponseEntity.ok(classBookingsService.getClassBookingById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//UpdateClassBooking
     @PutMapping("/{id}")
     public ResponseEntity<ClassBookingsResponse> updateClassBooking(
             @PathVariable Integer id,

@@ -1,0 +1,53 @@
+Ez itt neked kicsit segitség, hogyan igazodj el.!
+
+A mappák felépitése
+
+com.gymforge:
+    -Config:
+        Ebbe csak két dolog van a CorsConfig és a PasswordConfig
+
+    -Controller:
+        Ez a végpontok. Ezzek fontosak, hogy nézed öket.
+        Ebbe olyanok vannak, mint: AdmiController, AuthController.ClassBookingController...Stb
+
+    -dto:
+        -request:
+            Ezeket kell elküldeni a végpontnak (JSON). Hibás adatnál a validáció itt dob hibaüzenetet.
+            Ilyenek vannak bent, mint: CreateAdminRequest, UpdateAdminRequest... stb
+        -response:
+            Ez az, amit a végpont válaszként visszaküld (JSON)
+            Ilyenek vannak bent, mint. AdminResponse, ClassBookingResponse
+    -model:
+        Az adatbázis táblák Java megfelelői (entitások).
+        Ilyenek vannak bent, mint: User, Admin, Classes... stb
+    -repository
+        Ezek érik el az adatbázist (lekérdezések, MySQL eljárások hívása).
+        Ilyenek vannak bent, mint: AdminRepository, ClassBookingRepository
+    -security:
+        Egy dolog van benne, a JwtUtil. Ami fontos a token generálásához.
+        JWT token generálás és ellenőrzés
+    -service:
+        Itt van az üzleti logika, a controller ezeket hívja.
+
+Application: Ezzel indul el a program.
+
+Application.properties: Ez a email küldése miatt fontos.
+
+application.yaml: Ez a összekötés.
+
+---------------------------------------------------------------------
+
+Amik fontosak lesznek neked:
+
+-CorsConfig. Ez segit Összekötni a backendet és a Frontendet.
+-AuthController A token generálás miatt.
+-A ContactMessage és Pay-eket nézd át, mert abban van Email is.
+-A controllereket nézed, ha valamit csinálsz.
+-JWtUtil a tokenek miatt.
+-A servicben külön nézed a EmailService-t.
+-A UserTokenService-re is ügyelj.
+-Application.yaml
+
+
+
+

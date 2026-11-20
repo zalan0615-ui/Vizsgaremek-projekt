@@ -20,8 +20,8 @@ public class GymInfoService {
 
     private final GymInfoRepository gymInfoRepository;
 
-    //-----------------------------------------------------------------------------
-    // Lekérés (getgym_info eljárás)
+//-----------------------------------------------------------------------------
+//GetAllGymInfo
 
     public List<GymInfoResponse> getAllGymInfo() {
         return gymInfoRepository.getAllGymInfo()
@@ -31,14 +31,13 @@ public class GymInfoService {
     }
 
     //-----------------------------------------------------------------------------
-    // Lekérés id alapján (getByIdgym_info eljárás)
-
+//GetGymInfoByID!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     public GymInfoResponse getGymInfoById(Integer id) {
         return toResponse(findGymInfo(id));
     }
 
-    //-----------------------------------------------------------------------------
-    // Módosítás (updategym_info eljárás)
+//-----------------------------------------------------------------------------
+//UpdateGymInfo
 
     @Transactional
     public GymInfoResponse updateGymInfo(Integer id, UpdateGymInfoRequest request) {

@@ -19,23 +19,28 @@ public class ClassSchedulesController {
 
     private final ClassSchedulesService classSchedulesService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreateClassSchedules
     @PostMapping
     public ResponseEntity<ClassSchedulesResponse> createClassSchedule(
             @Valid @RequestBody CreateClassSchedulesRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(classSchedulesService.createClassSchedule(request));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetSchedules
     @GetMapping
     public ResponseEntity<List<ClassSchedulesResponse>> getAllClassSchedules() {
         return ResponseEntity.ok(classSchedulesService.getAllClassSchedules());
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetClassSchedulesById
     @GetMapping("/{id}")
     public ResponseEntity<ClassSchedulesResponse> getClassScheduleById(@PathVariable Integer id) {
         return ResponseEntity.ok(classSchedulesService.getClassScheduleById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//UpdateClassSchedules
     @PutMapping("/{id}")
     public ResponseEntity<ClassSchedulesResponse> updateClassSchedule(
             @PathVariable Integer id,

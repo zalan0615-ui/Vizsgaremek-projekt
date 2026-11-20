@@ -19,21 +19,26 @@ public class ClassesController {
 
     private final ClassesService classesService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreateClasses
     @PostMapping
     public ResponseEntity<ClassesResponse> createClass(@Valid @RequestBody CreateClassesRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(classesService.createClass(request));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetClasses
     @GetMapping
     public ResponseEntity<List<ClassesResponse>> getAllClasses() {
         return ResponseEntity.ok(classesService.getAllClasses());
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetClassesById
     @GetMapping("/{id}")
     public ResponseEntity<ClassesResponse> getClassById(@PathVariable Integer id) {
         return ResponseEntity.ok(classesService.getClassById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//UpdateClasses
     @PutMapping("/{id}")
     public ResponseEntity<ClassesResponse> updateClass(@PathVariable Integer id,
                                                        @Valid @RequestBody UpdateClassesRequest request) {

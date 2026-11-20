@@ -16,8 +16,8 @@ public class LogService {
 
     private final LogRepository logRepository;
 
-    //---------------------------------------------------------------------------
-    // Létrehozás (createlogs eljárás)
+//-----------------------------------------------------------------------------
+//CreateLog
 
     @Transactional
     public void createLog(Integer userId, Integer adminId, String action,
@@ -25,8 +25,8 @@ public class LogService {
         logRepository.createLog(userId, adminId, action, entityTable, entityId);
     }
 
-    //---------------------------------------------------------------------------
-    // Lekérdezés (getlogs, getlogsById eljárás)
+//-----------------------------------------------------------------------------
+//GetAllLog
 
     public List<LogResponse> getAllLogs() {
         return logRepository.getAllLogs()
@@ -34,7 +34,8 @@ public class LogService {
                 .map(this::toResponse)
                 .toList();
     }
-
+    //-----------------------------------------------------------------------------
+//GetLogById
     public LogResponse getLogById(Integer id) {
         return toResponse(findLog(id));
     }

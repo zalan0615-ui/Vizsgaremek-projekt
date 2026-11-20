@@ -25,8 +25,8 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
 
 
-    //-----------------------------------------------------------------------------
-    // Létrehozás (createuser eljárás)
+//-----------------------------------------------------------------------------
+//CreateUser
 
     @Transactional
     public UserResponse createUser(CreateUserRequest request) {
@@ -54,8 +54,8 @@ public class UserService {
         return toResponse(saved);
     }
 
-    //-----------------------------------------------------------------------------
-
+//-----------------------------------------------------------------------------
+//GetAllUser
 
     public List<UserResponse> getAllUsers() {
         return userRepository.getAllUsers()
@@ -63,7 +63,8 @@ public class UserService {
                 .map(this::toResponse)
                 .toList();
     }
-
+    //-----------------------------------------------------------------------------
+//UpdateUser
     @Transactional
     public UserResponse updateUser(Integer id, UpdateUserRequest request) {
         User user = findActiveUser(id);
@@ -89,13 +90,15 @@ public class UserService {
 
         return toResponse(findActiveUser(id));
     }
-
+    //-----------------------------------------------------------------------------
+//SoftDeleteUser
     @Transactional
     public void softDeleteUser(Integer id) {
         findActiveUser(id);
         userRepository.softDeleteUser(id);
     }
-
+    //-----------------------------------------------------------------------------
+//GetUserByID
     public UserResponse getUserById(Integer id) {
         return toResponse(findActiveUser(id));
     }

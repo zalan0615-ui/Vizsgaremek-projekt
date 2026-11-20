@@ -22,8 +22,9 @@ public class ClassesService {
 
     private final ClassesRepository classesRepository;
 
-    //----------------------------------------------------------------------------
-    // Létrehozás (createclasses eljárás)
+
+//-----------------------------------------------------------------------------
+//CreateClasses
 
     @Transactional
     public ClassesResponse createClass(CreateClassesRequest request) {
@@ -37,7 +38,6 @@ public class ClassesService {
                 request.getRoomType()
         );
 
-        // Az eljárás nem ad vissza id-t, ezért a legnagyobb id-jú sort keressük vissza
         Classes saved = classesRepository.getAllClasses().stream()
                 .max(Comparator.comparing(Classes::getId))
                 .orElseThrow(() -> new ResourceNotFoundException("Az edzésóra létrehozása nem sikerült"));
@@ -45,8 +45,8 @@ public class ClassesService {
         return toResponse(saved);
     }
 
-    //----------------------------------------------------------------------------
-
+//-----------------------------------------------------------------------------
+//GetAllClasses
 
     public List<ClassesResponse> getAllClasses() {
         return classesRepository.getAllClasses()
@@ -59,8 +59,8 @@ public class ClassesService {
         return toResponse(findClass(id));
     }
 
-    //----------------------------------------------------------------------------
-    // Módosítás (updateclasses eljárás)
+//-----------------------------------------------------------------------------
+//UpdateClasses
 
     @Transactional
     public ClassesResponse updateClass(Integer id, UpdateClassesRequest request) {
