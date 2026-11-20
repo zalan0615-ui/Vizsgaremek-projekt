@@ -1,0 +1,120 @@
+.workout-page {
+    padding:58px 0 0
+}
+.workout-hero {
+    display:grid;
+    grid-template-columns:1.13fr .87fr;
+    gap:38px;
+    align-items:stretch;
+    margin-bottom:22px
+}
+.workout-head h1 {
+    font-size:clamp(57px,6.1vw,92px);
+    margin-bottom:18px
+}
+.workout-photo {
+    min-height:248px;
+    border:1px solid #2b2b2b;
+    border-radius:13px;
+    background:radial-gradient(circle at 60% 27%,#252921,#101010 54%,#080808);
+    display:flex;
+    align-items:end;
+    overflow:hidden
+}
+.workout-photo-caption {
+    padding:24px;
+    background:linear-gradient(0deg,#000b,transparent);
+    width:100%
+}
+.workout-photo-caption h3 {
+    font-size:27px;
+    text-transform:none;
+    font-weight:550;
+    margin-bottom:6px
+}
+.workout-photo-caption small {
+    font-size:12px;
+    color:#b2b2b2
+}
+.workout-features {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:17px;
+    margin-top:22px
+}
+.feature-card {
+    background:linear-gradient(130deg,#191919,#0f0f0f);
+    border:1px solid #272727;
+    border-radius:12px;
+    padding:21px;
+    min-height:182px
+}
+.feature-card>span {
+    font-size:13px;
+    color:var(--lime);
+    font-weight:800
+}
+.feature-card h3 {
+    margin:18px 0 8px;
+    font-size:32px
+}
+.feature-card p {
+    color:#9c9c9c;
+    font-size:11px
+}
+.workout-action {
+    margin:17px 0 0;
+    padding:22px 26px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px
+}
+.workout-action h3 {
+    font-family:Inter;
+    font-size:19px;
+    font-weight:550;
+    text-transform:none;
+    letter-spacing:0
+}
+.workout-action p {
+    font-size:12px;
+    color:#969696;
+    margin-top:8px
+}
+.workout-action .btn {
+    min-width:116px
+}
+@media(max-width:800px) {
+    .workout-hero {
+        grid-template-columns:1fr
+    }
+    .workout-photo {
+        min-height:210px
+    }
+    .workout-features {
+        grid-template-columns:repeat(2,1fr)
+    }
+}
+@media(max-width:570px) {
+    .workout-page {
+        padding:34px 0 0
+    }
+    .workout-features {
+        gap:9px
+    }
+    .feature-card {
+        padding:15px;
+        min-height:160px
+    }
+    .feature-card h3 {
+        font-size:23px
+    }
+    .workout-action {
+        flex-direction:column;
+        align-items:stretch
+    }
+}
+
+/* A négy program a Bootstrap reszponzív oszlopaiban jelenik meg. */
+.workout-features.row .feature-card { width:100%; }

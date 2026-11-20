@@ -1,0 +1,88 @@
+.prices-page .page-heading {
+    padding-top:66px;
+    padding-bottom:39px
+}
+.prices-page h1 {
+    font-size:clamp(61px,6.8vw,104px)
+}
+.price-cards {
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:30px
+}
+.price-card {
+    padding:29px 29px 23px;
+    border:1px solid #272727;
+    border-radius:16px;
+    background:linear-gradient(140deg,#1b1b1b,#111);
+    min-height:345px;
+    display:flex;
+    flex-direction:column
+}
+
+.price-card h3 {
+    font-size:27px;
+    font-family:'Barlow Condensed',Impact,sans-serif;
+    font-weight:550
+}
+.price-card .price-number {
+    font-size:41px;
+    color:var(--lime);
+    font-family:'Barlow Condensed',Impact,sans-serif;
+    font-weight:700;
+    line-height:1;
+    margin:7px 0 18px
+}
+.price-card>p {
+    font-size:12px;
+    color:#999;
+    min-height:38px;
+    margin-bottom:15px
+}
+.price-card .feature {
+    font-size:12px;
+    color:#e0e0e0;
+    line-height:1.8
+}
+.price-card .feature:before {
+    content:'• ';
+    color:var(--lime)
+}
+.price-buy {
+    margin-top:auto;
+    padding-top:16px;
+    text-align:center
+}
+.price-buy .btn {
+    min-width:132px;
+    padding:8px 13px
+}
+@media(max-width:800px) {
+    .price-cards {
+        gap:12px
+    }
+    .price-card {
+        padding:20px 17px
+    }
+    .price-card .price-number {
+        font-size:33px
+    }
+}
+@media(max-width:640px) {
+    .prices-page .page-heading {
+        padding-top:30px
+    }
+    .price-cards {
+        grid-template-columns:1fr
+    }
+    .price-card {
+        min-height:0
+    }
+    .price-card>p {
+        min-height:0
+    }
+}
+
+/* Bootstrap rácsban egymás alá törő bérletkártyák. */
+.price-cards.row { margin-top:0; }
+.price-cards .price-card { min-height:355px; }
