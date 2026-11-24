@@ -1,4 +1,7 @@
-/** Admin bejelentkezés – nem éles jogosultságkezelés, csak DEMÓ. */
+/* ============================================================
+   ADMIN BEJELENTKEZÉS - FORGE BUDAPEST
+============================================================ */
+
 const adminPassword = document.querySelector('#admin-password');
 
 document.querySelector('.show-password').addEventListener('click', () => {

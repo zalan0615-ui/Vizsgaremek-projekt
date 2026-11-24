@@ -1,7 +1,20 @@
+
+/* ============================================================
+   SAJÁT ÓRAREND - FORGE BUDAPEST
+============================================================ */
+
+/* ----------------------------------------------------------
+   1. FELHASZNÁLÓ FOGLALÁSAINAK MEGJELENÍTÉSE
+---------------------------------------------------------- */
+
 /** A felhasználó foglalásainak megjelenítése (böngészős demó). */
 function renderBookings() {
   const session = FORGE.store.get('session', null);
   const container = document.querySelector('#my-lessons');
+
+  /* ----------------------------------------------------------
+     2. BEJELENTKEZÉS ELLENŐRZÉSE
+  ---------------------------------------------------------- */
 
   if (!session) {
     container.innerHTML = `
@@ -12,8 +25,16 @@ function renderBookings() {
     return;
   }
 
+  /* ----------------------------------------------------------
+     3. LEFOGLALT FOGLALKOZÁSOK LEKÉRÉSE
+  ---------------------------------------------------------- */
+
   const bookings = FORGE.getBookings();
   const lessons = FORGE.getLessons().filter((lesson) => bookings.includes(lesson.id));
+
+  /* ----------------------------------------------------------
+     4. FOGLALÁSOK MEGJELENÍTÉSE A HTML-BEN
+  ---------------------------------------------------------- */
 
   container.innerHTML = lessons.length
     ? lessons.map((lesson) => `
@@ -26,6 +47,10 @@ function renderBookings() {
         </div>`).join('')
     : '<div class="empty-state">Nincs lefoglalt foglalkozásod.</div>';
 
+  /* ----------------------------------------------------------
+     5. FOGLALÁS LEMONDÁSA
+  ---------------------------------------------------------- */
+
   container.querySelectorAll('[data-cancel]').forEach((button) => {
     button.addEventListener('click', () => {
       const id = Number(button.dataset.cancel);
@@ -35,5 +60,9 @@ function renderBookings() {
     });
   });
 }
+
+/* ----------------------------------------------------------
+   6. FOGLALÁSOK AUTOMATIKUS BETÖLTÉSE
+---------------------------------------------------------- */
 
 renderBookings();

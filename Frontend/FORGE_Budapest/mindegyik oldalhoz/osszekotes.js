@@ -1,14 +1,22 @@
 
-/* =====================================
+/* ============================================================
    FORGE BUDAPEST - BACKEND ÖSSZEKÖTÉS
-===================================== */
+============================================================ */
 
 (() => {
     "use strict";
 
+    /* ----------------------------------------------------------
+       1. BACKEND API CÍMÉNEK BEÁLLÍTÁSA
+    ---------------------------------------------------------- */
+
     const API_URL = "http://localhost:8081";
 
-    // Általános GET kérés
+
+    /* ----------------------------------------------------------
+       2. ÁLTALÁNOS GET KÉRÉS
+    ---------------------------------------------------------- */
+
     async function apiGet(endpoint) {
         const response = await fetch(
             API_URL + endpoint,
@@ -30,25 +38,39 @@
         return response.json();
     }
 
-    // Közös backend függvények
+
+    /* ----------------------------------------------------------
+       3. KÖZÖS BACKEND FÜGGVÉNYEK
+    ---------------------------------------------------------- */
+
     window.ForgeAPI = {
         get: apiGet
     };
 
-    // Edzőterem adatainak betöltése
+
+    /* ----------------------------------------------------------
+       4. EDZŐTEREM ADATAINAK BETÖLTÉSE
+    ---------------------------------------------------------- */
+
     async function loadGymInfo() {
 
-        // Csak akkor fut, ha az oldalon
-        // megtalálhatóak a statisztikák.
+        /* ------------------------------------------------------
+           4.1. STATISZTIKAI ELEMEK ELLENŐRZÉSE
+        ------------------------------------------------------ */
+
         const activeMembers =
             document.getElementById("activeMembers");
 
         if (!activeMembers) return;
 
         try {
+
+            /* --------------------------------------------------
+               4.2. ADATOK LEKÉRÉSE A BACKENDBŐL
+            -------------------------------------------------- */
+
             const result = await apiGet("/api/gym-info");
 
-            // A backend List-et ad vissza
             const gym = Array.isArray(result)
                 ? result[0]
                 : result;
@@ -57,19 +79,31 @@
                 throw new Error("Nincs edzőtermi adat!");
             }
 
-            // Aktív tagok száma
+
+            /* --------------------------------------------------
+               4.3. AKTÍV TAGOK SZÁMÁNAK MEGJELENÍTÉSE
+            -------------------------------------------------- */
+
             ForgeUI.setText(
                 "activeMembers",
                 ForgeUI.formatNumber(gym.usersNumber)
             );
 
-            // Nyitvatartás
+
+            /* --------------------------------------------------
+               4.4. NYITVATARTÁS MEGJELENÍTÉSE
+            -------------------------------------------------- */
+
             ForgeUI.setText(
                 "openingHours",
                 gym.openingHours
             );
 
-            // Prémium gépek száma
+
+            /* --------------------------------------------------
+               4.5. PRÉMIUM GÉPEK SZÁMÁNAK MEGJELENÍTÉSE
+            -------------------------------------------------- */
+
             ForgeUI.setText(
                 "premiumMachines",
                 ForgeUI.formatNumber(
@@ -83,6 +117,11 @@
             );
 
         } catch (error) {
+
+            /* --------------------------------------------------
+               4.6. HIBAKEZELÉS
+            -------------------------------------------------- */
+
             console.error(
                 "Backend kapcsolati hiba:",
                 error
@@ -94,7 +133,11 @@
         }
     }
 
-    // Oldal betöltése után indul
+
+    /* ----------------------------------------------------------
+       5. ADATOK AUTOMATIKUS BETÖLTÉSE
+    ---------------------------------------------------------- */
+
     if (document.readyState === "loading") {
         document.addEventListener(
             "DOMContentLoaded",

@@ -1,3 +1,12 @@
+
+/* ============================================================
+   FOGLALKOZÁSOK OLDAL - FORGE BUDAPEST
+============================================================ */
+
+/* ----------------------------------------------------------
+   1. FOGLALKOZÁSOK ADATAI
+---------------------------------------------------------- */
+
 /** Foglalkozások: a kártyák a HTML-ben, a részletek megnyitása itt van. */
 const groupClasses = [
   { name: 'GERINCTORNA', desc: 'Hát- és derékbarát mobilizáló óra, amivel könnyebb a mindennap.', freq: 'Hétfő, szerda', trainer: 'Dávid' },
@@ -8,10 +17,18 @@ const groupClasses = [
   { name: 'ALAKFORMÁLÓ', desc: 'Célzott erősítés és testsúlyos gyakorlatok, kezdőknek is.', freq: 'Hétfő, péntek', trainer: 'Eszter' }
 ];
 
+/* ----------------------------------------------------------
+   2. FOGLALKOZÁSOK GOMBJAINAK ESEMÉNYKEZELÉSE
+---------------------------------------------------------- */
+
 document.querySelectorAll('[data-class]').forEach((button) => {
   button.addEventListener('click', () => {
     const classInfo = groupClasses[Number(button.dataset.class)];
     if (!classInfo) return;
+
+    /* ----------------------------------------------------------
+       3. FOGLALKOZÁS RÉSZLETEINEK MEGJELENÍTÉSE
+    ---------------------------------------------------------- */
 
     FORGE.modal(classInfo.name, `
       <span class="eyebrow">FOGLALKOZÁS RÉSZLETEI</span>
