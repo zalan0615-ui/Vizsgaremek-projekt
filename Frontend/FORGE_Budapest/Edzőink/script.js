@@ -1,3 +1,12 @@
+
+/* ============================================================
+   EDZŐINK OLDAL - FORGE BUDAPEST
+============================================================ */
+
+/* ----------------------------------------------------------
+   1. EDZŐK ELÉRHETŐSÉGEI
+---------------------------------------------------------- */
+
 /** Edzők elérhetőségeit megjelenítő Bootstrap modális ablak. */
 const coachDetails = {
   'Kovács Dávid': { phone: '+36 30 555 0218', email: 'david@forgebudapest.hu' },
@@ -5,11 +14,24 @@ const coachDetails = {
   'Nagy Márk': { phone: '+36 30 555 0218', email: 'mark@forgebudapest.hu' }
 };
 
+/* ----------------------------------------------------------
+   2. EDZŐ ADATLAPJÁNAK MEGNYITÁSA
+---------------------------------------------------------- */
+
 document.querySelectorAll('.trainer-details').forEach((button) => {
   button.addEventListener('click', () => {
+
+    /* ----------------------------------------------------------
+       3. KIVÁLASZTOTT EDZŐ ADATAINAK LEKÉRÉSE
+    ---------------------------------------------------------- */
+
     const card = button.closest('.trainer-card');
     const name = card.dataset.name;
     const coach = coachDetails[name];
+
+    /* ----------------------------------------------------------
+       4. EDZŐ ELÉRHETŐSÉGEINEK MEGJELENÍTÉSE
+    ---------------------------------------------------------- */
 
     FORGE.modal('FORGE BUDAPEST', `
       <span class="tag">KAPCSOLAT</span>
