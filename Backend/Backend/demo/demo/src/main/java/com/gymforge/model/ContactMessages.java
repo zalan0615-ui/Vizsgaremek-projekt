@@ -23,7 +23,6 @@ public class ContactMessages {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // Figyelem: az adatbázisban nagy kezdőbetűvel van (Name, Email, Message, Status)
     @Column(name = "Name", nullable = false, length = 150)
     private String name;
 
@@ -41,11 +40,9 @@ public class ContactMessages {
     @Column(name = "created_at", insertable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    // Akkor töltjük ki, amikor az üzenet "resolved" lesz
     @Column(name = "Resolved_at")
     private LocalDateTime resolvedAt;
 
-    // Melyik admin kezelte (később @ManyToOne lesz az Admin felé)
     @Column(name = "Admin_id")
     private Integer adminId;
 }

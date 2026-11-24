@@ -1,8 +1,10 @@
 package com.gymforge.model;
 
 public enum ClassName {
-    // Ide írhatod majd be pontosan az adatbázisban szereplő enum értékeket
-    YOGA,
-    CROSSFIT,
-    SPINNING
+    gerinctorna,
+    joga,
+    noi_kondicionalo_torna,
+    cross_training,
+    latin_fitness,
+    alakformalo
 }

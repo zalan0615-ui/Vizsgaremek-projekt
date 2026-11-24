@@ -21,14 +21,12 @@ public class Memberships {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // Hány napig érvényes a bérlet
     @Column(name = "duration_days")
     private Integer durationDays;
 
     @Column(name = "title", nullable = false, length = 150)
     private String title;
 
-    // decimal(10,2): pénzösszegnél BigDecimal kell, nem double
     @Column(name = "price", nullable = false, precision = 10, scale = 2)
     private BigDecimal price;
 }

@@ -18,10 +18,13 @@ public class PayController {
 
     private final PayService payService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreatePay
     @PostMapping
     public ResponseEntity<PayResponse> createPay(@Valid @RequestBody CreatePayRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(payService.createPay(request));
     }
 }
 
+//ÁTGONDOLNI, HOGY KELL-E GET ÉS UPDATE!!!!
 //----------------------------------------------------------------------------------------------//

@@ -13,10 +13,12 @@ import lombok.Setter;
 @Setter
 public class UpdateAdminRequest {
 
+    //Felhasználónév kell
     @NotBlank(message = "A felhasználónév kötelező")
     @Size(max = 100, message = "Maximum 100 karakter")
     private String username;
 
+    //Email nincs
     @NotBlank(message = "Az email kötelező")
     @Email(message = "Hibás email formátum")
     @Size(max = 150, message = "Maximum 150 karakter")

@@ -1,13 +1,17 @@
 package com.gymforge.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 //----------------------------------------------------------------------------------------------------//
-//ClassSchedules class (edzésórák heti időpontjai)
+//ClassSchedules class (órarend)
 
 @Entity
 @Table(name = "class_schedules")
@@ -22,15 +26,13 @@ public class ClassSchedules {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // Melyik edzésóra (később @ManyToOne lesz a Classes/GymClass felé)
     @Column(name = "class_id", nullable = false)
     private Integer classId;
 
-    // Az adatbázisban enum('monday','tuesday','wednesday','thursday',...), itt egyelőre String
+    @Enumerated(EnumType.STRING)
     @Column(name = "day_of_week", nullable = false)
-    private String dayOfWeek;
+    private DayOfWeek dayOfWeek;
 
-    // A "time" típus Java-ban LocalTime (csak óra:perc, dátum nélkül)
     @Column(name = "start_time", nullable = false)
     private LocalTime startTime;
 

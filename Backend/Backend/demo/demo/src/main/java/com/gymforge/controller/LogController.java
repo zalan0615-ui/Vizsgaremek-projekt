@@ -22,16 +22,20 @@ public class LogController {
 
     private final LogService logService;
 
+//---------------------------------------------------------------------------------------------------------//
+//GetLog
     @GetMapping
     public ResponseEntity<List<LogResponse>> getAllLogs() {
         return ResponseEntity.ok(logService.getAllLogs());
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetLogById
     @GetMapping("/{id}")
     public ResponseEntity<LogResponse> getLogById(@PathVariable Integer id) {
         return ResponseEntity.ok(logService.getLogById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//CreateLog
     @PostMapping
     public ResponseEntity<String> createLog(@RequestBody Map<String, Object> body) {
         logService.createLog(
@@ -43,5 +47,8 @@ public class LogController {
         return ResponseEntity.status(HttpStatus.CREATED).body("Naplóbejegyzés létrehozva");
     }
 }
+
+
+
 
 //----------------------------------------------------------------------------------------------------//

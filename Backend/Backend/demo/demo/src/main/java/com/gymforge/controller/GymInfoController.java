@@ -25,22 +25,24 @@ public class GymInfoController {
 
     private final GymInfoService gymInfoService;
 
-    //----------------------------------------------------------------------//
-    // GET /api/gym-info -> az összes sor (nálunk általában egy darab)
+//---------------------------------------------------------------------------------------------------------//
+//GetGymInfo
     @GetMapping
     public ResponseEntity<List<GymInfoResponse>> getAllGymInfo() {
         return ResponseEntity.ok(gymInfoService.getAllGymInfo());
     }
+//---------------------------------------------------------------------------------------------------------//
+//GetGymInfoByID KIKELL TÖRÖLNI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    //----------------------------------------------------------------------//
-    // GET /api/gym-info/{id} -> egy sor id alapján
     @GetMapping("/{id}")
     public ResponseEntity<GymInfoResponse> getGymInfoById(@PathVariable Integer id) {
         return ResponseEntity.ok(gymInfoService.getGymInfoById(id));
     }
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    //----------------------------------------------------------------------//
-    // PUT /api/gym-info/{id} -> módosítás
+//---------------------------------------------------------------------------------------------------------//
+//UpdateGymInfo MEGNÉZNI, HOGY KELL-E ID. SZERINTEM NEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     @PutMapping("/{id}")
     public ResponseEntity<GymInfoResponse> updateGymInfo(@PathVariable Integer id,
                                                          @Valid @RequestBody UpdateGymInfoRequest request) {

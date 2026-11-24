@@ -22,20 +22,19 @@ public class PayService {
     private final PayRepository payRepository;
     private final EmailService emailService;
 
-    //------------------------------------------------------------------------
-    // Létrehozás (createpaysWithId eljárás) + visszaigazoló email
+//-----------------------------------------------------------------------------
+//CreatePay
 
     @Transactional
     public PayResponse createPay(CreatePayRequest request) {
 
         Integer id = payRepository.createPay(
-                request.getUserId(),         // user_id
-                request.getMembershipId(),   // membership_id
-                request.getPrice()           // price
+                request.getUserId(),
+                request.getMembershipId(),
+                request.getPrice()
         );
 
-        // Email küldése, csak siker esetén lesz email_sent = 1
-        boolean sent = sendConfirmationEmail(request.getEmail());
+        boolean sent = sendConfirmationEmail(request.getEmail()); //ÁTNÉZNI!!!
         if (sent) {
             payRepository.markEmailSent(id);
         }
@@ -43,28 +42,30 @@ public class PayService {
         return toResponse(findPay(id));
     }
 
-    //------------------------------------------------------------------------
-
+//-----------------------------------------------------------------------------
+//GetAllPay
     public List<PayResponse> getAllPays() {
         return payRepository.getAllPays()
                 .stream()
                 .map(this::toResponse)
                 .toList();
     }
-
+//-----------------------------------------------------------------------------
+//GetPayById
     public PayResponse getPayById(Integer id) {
         return toResponse(findPay(id));
     }
 
-    //------------------------------------------------------------------------
-    // Segédmetódusok
+
 
     private Pays findPay(Integer id) {
         return payRepository.getPayById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("A fizetés nem található"));
     }
 
-    // Visszaigazoló email a vásárlónak
+//-----------------------------------------------------------------------------
+//PAY EMAIL FONTOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
     private boolean sendConfirmationEmail(String to) {
         try {
             String subject = "Jegyfoglalás visszaigazolása";

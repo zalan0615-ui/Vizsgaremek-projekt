@@ -36,7 +36,6 @@ public class GymInfo {
     @Column(name = "email", length = 150)
     private String email;
 
-    // A "opening_hours" text típusú, ezért kell a columnDefinition
     @Column(name = "opening_hours", columnDefinition = "text")
     private String openingHours;
 
@@ -46,7 +45,6 @@ public class GymInfo {
     @Column(name = "trainers_number")
     private Integer trainersNumber;
 
-    // Figyelem: itt "updated_at" a neve, nem "update_at" mint a többi táblában
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 }

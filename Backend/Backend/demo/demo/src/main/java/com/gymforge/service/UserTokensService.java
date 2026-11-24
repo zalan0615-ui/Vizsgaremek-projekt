@@ -20,23 +20,21 @@ public class UserTokensService {
     private final UserTokensRepository userTokensRepository;
     private final UserRepository userRepository;
 
-    //--------------------------------------------------------------------------------//
-    // Token létrehozása (createuser_tokens eljárás) - remember_token generálásával
+//-----------------------------------------------------------------------------
+//CreateUserToken
     @Transactional
     public UserTokensResponse createRememberToken(Integer userId) {
-        // Ellenőrizzük, hogy létezik-e ilyen felhasználó
         userRepository.getUserById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("A felhasználó nem található"));
 
-        // 36 karakteres egyedi token generálása (befér a VARCHAR(100) mezőbe)
         String generatedToken = UUID.randomUUID().toString();
 
         userTokensRepository.createUserTokens(
                 userId,
                 generatedToken,
-                null, // reset_password_token
-                null, // reset_password_expires
-                null  // email_verified_at
+                null,
+                null,
+                null
         );
 
         // Visszakeressük a frissen létrehozott sort (a legmagasabb id-jút ehhez a userhez)
@@ -48,22 +46,22 @@ public class UserTokensService {
         return toResponse(saved);
     }
 
-    //--------------------------------------------------------------------------------//
-    // Összes token lekérése (getuser_tokens eljárás)
+    //-----------------------------------------------------------------------------
+//GetAllUserToken
     public List<UserTokensResponse> getAllUserTokens() {
         return userTokensRepository.getAllUserTokens().stream()
                 .map(this::toResponse)
                 .toList();
     }
 
-    //--------------------------------------------------------------------------------//
-    // Egy token lekérése id alapján (getByIduser_tokens eljárás)
+    //-----------------------------------------------------------------------------
+//GetUserTokenById
     public UserTokensResponse getUserTokensById(Integer id) {
         return toResponse(findUserTokens(id));
     }
 
-    //--------------------------------------------------------------------------------//
-    // Token frissítése (updateuser_tokens eljárás)
+    //-----------------------------------------------------------------------------
+//UpdateUserToken
     @Transactional
     public UserTokensResponse updateRememberToken(Integer id) {
         UserTokens existing = findUserTokens(id);
@@ -101,3 +99,5 @@ public class UserTokensService {
                 .build();
     }
 }
+
+//ÁTNÉZNI!!!!!!!!!!!!!!

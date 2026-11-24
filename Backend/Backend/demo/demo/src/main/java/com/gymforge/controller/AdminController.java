@@ -22,21 +22,31 @@ public class AdminController {
 
     private final AdminService adminService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreateAdmin
+
     @PostMapping
     public ResponseEntity<AdminResponse> createAdmin(@Valid @RequestBody CreateAdminRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(adminService.createAdmin(request));
     }
 
+//---------------------------------------------------------------------------------------------------------//
+//GetAdmin
     @GetMapping
     public ResponseEntity<List<AdminResponse>> getAllAdmins() {
         return ResponseEntity.ok(adminService.getAllAdmins());
     }
+
+//---------------------------------------------------------------------------------------------------------//
+//GetAdminById
 
     @GetMapping("/{id}")
     public ResponseEntity<AdminResponse> getAdminById(@PathVariable Integer id) {
         return ResponseEntity.ok(adminService.getAdminById(id));
     }
 
+//---------------------------------------------------------------------------------------------------------//
+//UpdateAdmin
     @PutMapping("/{id}")
     public ResponseEntity<AdminResponse> updateAdmin(@PathVariable Integer id,
                                                      @Valid @RequestBody UpdateAdminRequest request) {
