@@ -103,6 +103,7 @@ public class UserService {
         return toResponse(findActiveUser(id));
     }
 
+
     //-----------------------------------------------------------------------------
     // Segédmetódusok
 

@@ -1,10 +1,16 @@
 package com.gymforge.controller;
 
+import com.gymforge.dto.request.LoginRequest;
+import com.gymforge.dto.response.LoginResponse;
+import com.gymforge.exception.ResourceNotFoundException;
+import com.gymforge.model.User;
+import com.gymforge.repository.UserRepository;
 import com.gymforge.security.JwtUtil;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.*;
 
 //----------------------------------------------------------------------//
 // AuthController (EGYELŐRE csak teszt: látjuk, hogy a token generálás működik)
@@ -15,11 +21,28 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     private final JwtUtil jwtUtil;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @GetMapping("/test-token")
     public String testToken() {
         return jwtUtil.generateToken(1, "teszt@teszt.hu", "USER");
     }
-}
 
+
+@PostMapping("/login")
+public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest request) {
+
+    User user = userRepository.getUserByEmail(request.getEmail())
+            .orElseThrow(() -> new ResourceNotFoundException("Hibás email vagy jelszó"));
+
+    if (!passwordEncoder.matches(request.getPassword(), user.getPasswordHash())) {
+        throw new ResourceNotFoundException("Hibás email vagy jelszó");
+    }
+
+    String token = jwtUtil.generateToken(user.getId(), user.getEmail(), "USER");
+
+    return ResponseEntity.ok(new LoginResponse(token));
+
+}}
 //----------------------------------------------------------------------//
