@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 @Builder
 public class ContactMessagesResponse {
     private Integer id;
-    private String name;                // Ki küldte az üzenetet
-    private String email;               // Ide válaszolhatunk
-    private String message;             // Az üzenet szövege
-    private ContactStatus status;       // new / in_progress / resolved
-    private LocalDateTime createdAt;    // Mikor érkezett
-    private LocalDateTime resolvedAt;   // Mikor lett lezárva, lehet null
-    private Integer adminId;            // Melyik admin kezelte, lehet null
+    private String name;
+    private String email;
+    private String message;
+    private ContactStatus status;
+    private LocalDateTime createdAt;
+    private LocalDateTime resolvedAt;
+    private Integer adminId;
 }

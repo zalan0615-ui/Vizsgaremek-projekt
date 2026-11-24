@@ -1,7 +1,7 @@
 package com.gymforge.model;
 
 public enum RoomType {
-    A_TEREM,
-    B_TEREM,
-    KUZDOTER
+    A_terem,
+    B_terem,
+    kuzdoter
 }

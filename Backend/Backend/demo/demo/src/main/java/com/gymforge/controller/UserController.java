@@ -18,28 +18,33 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-
+//---------------------------------------------------------------------------------------------------------//
+//CreateUser
     @PostMapping
     public ResponseEntity<UserResponse> createUser(@Valid @RequestBody CreateUserRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(request));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetUser
     @GetMapping
     public ResponseEntity<List<UserResponse>> getAllUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetUserById
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> getUserById(@PathVariable Integer id) {
         return ResponseEntity.ok(userService.getUserById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//UpdateUser
     @PutMapping("/{id}")
     public ResponseEntity<UserResponse> updateUser(@PathVariable Integer id,
                                                    @Valid @RequestBody UpdateUserRequest request) {
         return ResponseEntity.ok(userService.updateUser(id, request));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//DeleteUser
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Integer id) {
         userService.softDeleteUser(id);

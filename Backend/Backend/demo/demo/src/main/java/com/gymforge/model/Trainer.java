@@ -21,7 +21,6 @@ public class Trainer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // Figyelem: az adatbázisban nagy kezdőbetűvel van (Firstname, Lastname)
     @Column(name = "Firstname", nullable = false, length = 100)
     private String firstName;
 
@@ -34,7 +33,6 @@ public class Trainer {
     @Column(name = "email", nullable = false, length = 150)
     private String email;
 
-    // A "title" text típusú, ezért kell a columnDefinition
     @Column(name = "title", columnDefinition = "text")
     private String title;
 

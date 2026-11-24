@@ -27,8 +27,8 @@ public class ContactMessagesService {
     @Value("${app.mail.recipient}")
     private String mailRecipient;
 
-    //--------------------------------------------------------------------------
-    // Létrehozás (createcontact_messages eljárás)
+//-----------------------------------------------------------------------------
+//CreateContactMessage
 
     @Transactional
     public ContactMessagesResponse createContactMessage(CreateContactMessageRequest request) {
@@ -42,7 +42,6 @@ public class ContactMessagesService {
                 null        // admin_id
         );
 
-        // Az eljárás nem ad vissza ID-t, ezért a legutóbbi egyező sort keressük meg
         ContactMessages saved = contactMessagesRepository.getAllContactMessages().stream()
                 .filter(c -> c.getEmail().equals(request.getEmail())
                         && c.getName().equals(request.getName())
@@ -55,8 +54,8 @@ public class ContactMessagesService {
         return toResponse(saved);
     }
 
-    //--------------------------------------------------------------------------
-    // Lekérdezés (getcontact_messages, getByIdcontact_messages eljárás)
+//-----------------------------------------------------------------------------
+//GetAllContactMessage
 
     public List<ContactMessagesResponse> getAllContactMessages() {
         return contactMessagesRepository.getAllContactMessages()
@@ -69,8 +68,8 @@ public class ContactMessagesService {
         return toResponse(findContactMessage(id));
     }
 
-    //--------------------------------------------------------------------------
-    // Módosítás (updatecontact_messages eljárás)
+//-----------------------------------------------------------------------------
+//UpdateContactMessage
 
     @Transactional
     public ContactMessagesResponse updateContactMessage(Integer id, CreateContactMessageRequest request) {

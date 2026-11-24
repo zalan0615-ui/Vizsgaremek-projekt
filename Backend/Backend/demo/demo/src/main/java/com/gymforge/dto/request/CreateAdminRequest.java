@@ -13,15 +13,18 @@ import lombok.Setter;
 @Setter
 public class CreateAdminRequest {
 
+    //Ha nincs név
     @NotBlank(message = "A név megadása kötelező")
     @Size(max = 100)
     private String username;
 
+    //Ha nincs email
     @NotBlank(message = "A email megadása kötelező")
     @Email(message = "Nem érvényes email formátum")
     @Size(max = 150)
     private String email;
 
+    //Ha nincs jelszó
     @NotBlank(message = "A jelszó megadása kötelező")
     @Size(min = 8, max = 100)
     private String password;

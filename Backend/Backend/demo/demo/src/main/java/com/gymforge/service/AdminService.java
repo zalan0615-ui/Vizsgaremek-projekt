@@ -24,13 +24,12 @@ public class AdminService {
     private final AdminRepository adminRepository;
     private final PasswordEncoder passwordEncoder;
 
-    //-----------------------------------------------------------------------------
-    // Létrehozás (createadmin eljárás)
+//-----------------------------------------------------------------------------
+//CreateAdmin
 
     @Transactional
     public AdminResponse createAdmin(CreateAdminRequest request) {
 
-        // Foglalt-e már (a getadmin eljárás listájából nézzük, mert nincs külön eljárás hozzá)
         List<Admin> admins = adminRepository.getAllAdmins();
         if (admins.stream().anyMatch(a -> a.getUsername().equals(request.getUsername()))) {
             throw new DuplicateResourceException("Ez a felhasználónév már foglalt");
@@ -38,6 +37,7 @@ public class AdminService {
         if (admins.stream().anyMatch(a -> a.getEmail().equals(request.getEmail()))) {
             throw new DuplicateResourceException("Ez az email már regisztrálva van");
         }
+
 
         // A jelszót hash-eljük, az eljárás a password_hash-t várja
         adminRepository.createAdmin(
@@ -56,8 +56,8 @@ public class AdminService {
         return toResponse(saved);
     }
 
-    //-----------------------------------------------------------------------------
-    // Lista, módosítás, soft delete
+//-----------------------------------------------------------------------------
+//GetAllAdmin
 
     public List<AdminResponse> getAllAdmins() {
         return adminRepository.getAllAdmins()
@@ -66,6 +66,8 @@ public class AdminService {
                 .toList();
     }
 
+    //-----------------------------------------------------------------------------
+//UpdateAdmin
     @Transactional
     public AdminResponse updateAdmin(Integer id, UpdateAdminRequest request) {
         Admin admin = findActiveAdmin(id);
@@ -92,7 +94,8 @@ public class AdminService {
 
         return toResponse(findActiveAdmin(id)); // újra beolvassuk a módosított sort
     }
-
+    //-----------------------------------------------------------------------------
+//SoftDeleteAdmin
     @Transactional
     public void softDeleteAdmin(Integer id) {
         findActiveAdmin(id);                   // ha nincs ilyen admin, 404

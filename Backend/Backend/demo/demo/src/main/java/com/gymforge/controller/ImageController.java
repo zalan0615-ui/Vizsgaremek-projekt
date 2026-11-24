@@ -18,27 +18,34 @@ public class ImageController {
 
     private final ImageService imageService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreateImage
     @PostMapping
     public ResponseEntity<ImageResponse> create(@Valid @RequestBody ImageRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(imageService.createImage(request));
     }
-
+//---------------------------------------------------------------------------------------------------------//
+//GetImage
     @GetMapping
     public ResponseEntity<List<ImageResponse>> getAll() {
         return ResponseEntity.ok(imageService.getAllImages());
     }
 
+    //---------------------------------------------------------------------------------------------------------//
+//GetImageByID
     @GetMapping("/{id}")
     public ResponseEntity<ImageResponse> getById(@PathVariable Integer id) {
         return ResponseEntity.ok(imageService.getImageById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//UpdateImage
     @PutMapping("/{id}")
     public ResponseEntity<ImageResponse> update(@PathVariable Integer id,
                                                 @Valid @RequestBody ImageRequest request) {
         return ResponseEntity.ok(imageService.updateImage(id, request));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//DeleteImage
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Integer id) {
         imageService.deleteImage(id);

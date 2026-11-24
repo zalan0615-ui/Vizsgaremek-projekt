@@ -19,3 +19,4 @@ public class CorsConfig implements WebMvcConfigurer {
 
 //----------------------------------------------------------------------------------------------//
 
+//Frontendesnek: Ez az, ami összeköti a backendet és a frontendet

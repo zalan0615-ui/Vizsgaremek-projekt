@@ -21,8 +21,8 @@ public class TrainerSchedulesService {
 
     private final TrainerSchedulesRepository trainerSchedulesRepository;
 
-    //------------------------------------------------------------------------
-    // Létrehozás (createtrainer_schedules eljárás)
+//-----------------------------------------------------------------------------
+//CreateTrainerSchedules
 
     @Transactional
     public TrainerSchedulesResponse createTrainerSchedule(CreateTrainerSchedulesRequest request) {
@@ -34,7 +34,6 @@ public class TrainerSchedulesService {
                 request.getEndTime()
         );
 
-        // Az eljárás nem ad vissza id-t, ezért a legnagyobb id-jú egyező sort keressük meg
         TrainerSchedules saved = trainerSchedulesRepository.getAllTrainerSchedules().stream()
                 .filter(s -> s.getTrainerId().equals(request.getTrainerId())
                         && s.getDayOfWeek().equals(request.getDayOfWeek())
@@ -46,15 +45,16 @@ public class TrainerSchedulesService {
         return toResponse(saved);
     }
 
-    //------------------------------------------------------------------------
-
+    //-----------------------------------------------------------------------------
+//GetAllTrainerSchedules
     public List<TrainerSchedulesResponse> getAllTrainerSchedules() {
         return trainerSchedulesRepository.getAllTrainerSchedules()
                 .stream()
                 .map(this::toResponse)
                 .toList();
     }
-
+    //-----------------------------------------------------------------------------
+//UpdateTrainerSchedules
     @Transactional
     public TrainerSchedulesResponse updateTrainerSchedule(Integer id, UpdateTrainerSchedulesRequest request) {
         findTrainerSchedule(id);
@@ -69,10 +69,13 @@ public class TrainerSchedulesService {
 
         return toResponse(findTrainerSchedule(id));
     }
-
+    //-----------------------------------------------------------------------------
+//GetTrainerSchedulesById
     public TrainerSchedulesResponse getTrainerScheduleById(Integer id) {
         return toResponse(findTrainerSchedule(id));
     }
+
+    //NEM KELL SOFT DELETE????
 
     //------------------------------------------------------------------------
     // Segédmetódusok

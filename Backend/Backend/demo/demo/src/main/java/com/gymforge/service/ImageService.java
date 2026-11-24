@@ -18,8 +18,8 @@ public class ImageService {
 
     private final ImageRepository imageRepository;
 
-    //---------------------------------------------------------------------------
-    // Létrehozás (createimages eljárás)
+//-----------------------------------------------------------------------------
+//CreateImage
 
     @Transactional
     public ImageResponse createImage(ImageRequest request) {
@@ -34,8 +34,8 @@ public class ImageService {
         return toResponse(saved);
     }
 
-    //---------------------------------------------------------------------------
-    // Lekérdezés (getimages, getByIdimages eljárás)
+//-----------------------------------------------------------------------------
+//GetAllImage
 
     public List<ImageResponse> getAllImages() {
         return imageRepository.getAllImages()
@@ -48,8 +48,8 @@ public class ImageService {
         return toResponse(findActiveImage(id));
     }
 
-    //---------------------------------------------------------------------------
-    // Módosítás (updateimages eljárás)
+//-----------------------------------------------------------------------------
+//UpdateImage
 
     @Transactional
     public ImageResponse updateImage(Integer id, ImageRequest request) {
@@ -60,8 +60,8 @@ public class ImageService {
         return toResponse(findActiveImage(id));
     }
 
-    //---------------------------------------------------------------------------
-    // Törlés (softDeleteimages eljárás)
+//-----------------------------------------------------------------------------
+//SoftDeleteImage
 
     @Transactional
     public void deleteImage(Integer id) {

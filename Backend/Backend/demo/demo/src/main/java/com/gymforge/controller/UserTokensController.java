@@ -16,8 +16,8 @@ public class UserTokensController {
 
     private final UserTokensService userTokensService;
 
-    //--------------------------------------------------------------------------------//
-    // POST /api/user-tokens/{userId} -> új remember_token generálása és mentése a usernek
+//--------------------------------------------------------------------------------//
+// CreateUserTokens
     @PostMapping("/{userId}")
     public ResponseEntity<UserTokensResponse> createRememberToken(@PathVariable Integer userId) {
         return ResponseEntity.status(HttpStatus.CREATED)
@@ -25,21 +25,21 @@ public class UserTokensController {
     }
 
     //--------------------------------------------------------------------------------//
-    // GET /api/user-tokens -> összes token lekérése
+// GetUserTokens
     @GetMapping
     public ResponseEntity<List<UserTokensResponse>> getAllUserTokens() {
         return ResponseEntity.ok(userTokensService.getAllUserTokens());
     }
 
     //--------------------------------------------------------------------------------//
-    // GET /api/user-tokens/{id} -> egy token lekérése id alapján
+// GetUserTokensById
     @GetMapping("/{id}")
     public ResponseEntity<UserTokensResponse> getUserTokensById(@PathVariable Integer id) {
         return ResponseEntity.ok(userTokensService.getUserTokensById(id));
     }
 
     //--------------------------------------------------------------------------------//
-    // PUT /api/user-tokens/{id} -> remember_token frissítése (újragenerálása)
+// UpdateCreateUserTokens
     @PutMapping("/{id}")
     public ResponseEntity<UserTokensResponse> updateRememberToken(@PathVariable Integer id) {
         return ResponseEntity.ok(userTokensService.updateRememberToken(id));
