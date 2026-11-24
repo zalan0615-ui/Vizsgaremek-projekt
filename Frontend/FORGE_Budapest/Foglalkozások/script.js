@@ -3,6 +3,8 @@
    FOGLALKOZÁSOK OLDAL - FORGE BUDAPEST
 ============================================================ */
 
+import { apiGet } from "../mindegyik oldalhoz/osszekotes.js";
+
 /* ----------------------------------------------------------
    1. FOGLALKOZÁSOK ADATAI
 ---------------------------------------------------------- */

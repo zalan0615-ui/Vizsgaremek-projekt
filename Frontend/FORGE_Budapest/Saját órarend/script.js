@@ -3,6 +3,8 @@
    SAJÁT ÓRAREND - FORGE BUDAPEST
 ============================================================ */
 
+import { apiGet, apiPost, apiDelete } from "../mindegyik oldalhoz/osszekotes.js";
+
 /* ----------------------------------------------------------
    1. FELHASZNÁLÓ FOGLALÁSAINAK MEGJELENÍTÉSE
 ---------------------------------------------------------- */

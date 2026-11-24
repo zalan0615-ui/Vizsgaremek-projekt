@@ -3,6 +3,7 @@
    ÁRAK OLDAL - FORGE BUDAPEST
 ============================================================ */
 
+import { apiGet, apiPost } from "../mindegyik oldalhoz/osszekotes.js";
 
 /* ------------------------------------------------------------
    1. BÉRLETEK ADATAI ÉS ÁRAI

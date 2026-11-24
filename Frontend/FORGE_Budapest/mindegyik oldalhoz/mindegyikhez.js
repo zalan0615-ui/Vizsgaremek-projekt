@@ -52,6 +52,7 @@
      2. LOCALSTORAGE - ADATOK MENTÉSE ÉS LEKÉRÉSE
   ============================================================ */
 
+  //Ezt NÉZD ÁT!!!
   const store = {
 
     get(key, fallback) {
@@ -80,6 +81,7 @@
 
   function notify(message) {
 
+    //EZT IS!
     const toast = document.createElement('div');
 
     toast.className =

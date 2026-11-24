@@ -3,6 +3,8 @@
    ADMINPANEL - FORGE BUDAPEST
 ============================================================ */
 
+import { apiGet, apiPost, apiPut, apiDelete } from "../mindegyik oldalhoz/osszekotes.js";
+
 /* ----------------------------------------------------------
    1. ADMIN BEJELENTKEZÉS ELLENŐRZÉSE
 ---------------------------------------------------------- */
