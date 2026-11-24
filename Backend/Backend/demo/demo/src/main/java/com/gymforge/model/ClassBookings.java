@@ -21,15 +21,12 @@ public class ClassBookings {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // Ki jelentkezett (később @ManyToOne lesz a User felé)
     @Column(name = "user_id", nullable = false)
     private Integer userId;
 
-    // Melyik időpontra (később @ManyToOne lesz a ClassSchedules felé)
     @Column(name = "class_schedule_id", nullable = false)
     private Integer classScheduleId;
 
-    // Alapértéke nincs az adatbázisban, ezt nekünk kell megadni mentéskor
     @Column(name = "booking_date", nullable = false)
     private LocalDateTime bookingDate;
 

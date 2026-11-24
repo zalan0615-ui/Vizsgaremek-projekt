@@ -18,21 +18,26 @@ public class ContactMessagesController {
 
     private final ContactMessagesService contactMessagesService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreateContactMessagesController
     @PostMapping
     public ResponseEntity<ContactMessagesResponse> createContactMessage(@Valid @RequestBody CreateContactMessageRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED).body(contactMessagesService.createContactMessage(request));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetContactMessagesController
     @GetMapping
     public ResponseEntity<List<ContactMessagesResponse>> getAllContactMessages() {
         return ResponseEntity.ok(contactMessagesService.getAllContactMessages());
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetContactMessagesControllerById
     @GetMapping("/{id}")
     public ResponseEntity<ContactMessagesResponse> getContactMessageById(@PathVariable Integer id) {
         return ResponseEntity.ok(contactMessagesService.getContactMessageById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//UpdateContactMessagesController
     @PutMapping("/{id}")
     public ResponseEntity<ContactMessagesResponse> updateContactMessage(@PathVariable Integer id,
                                                                         @Valid @RequestBody CreateContactMessageRequest request) {

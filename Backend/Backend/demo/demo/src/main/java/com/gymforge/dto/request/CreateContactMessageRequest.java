@@ -12,15 +12,18 @@ import lombok.Setter;
 @Setter
 public class CreateContactMessageRequest {
 
+    //Ha nincs név
     @NotBlank(message = "A név megadása kötelező")
     @Size(max = 150)
     private String name;
 
+    //Ha nincs email
     @NotBlank(message = "Az email megadása kötelező")
     @Email(message = "Nem érvényes email formátum")
     @Size(max = 150)
     private String email;
 
+    //Ha nincs üzenet (2000 karakter hosszu lehet az üzenet)
     @NotBlank(message = "Az üzenet megadása kötelező")
     @Size(max = 2000, message = "Az üzenet legfeljebb 2000 karakter lehet")
     private String message;

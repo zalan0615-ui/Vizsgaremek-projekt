@@ -9,10 +9,10 @@ import java.time.LocalDateTime;
 @Builder
 public class LogResponse {
     private Integer id;
-    private Integer userId;          // Ki csinálta (tag), lehet null
-    private Integer adminId;         // Ki csinálta (admin), lehet null
-    private String action;           // Mi történt, pl. USER_DELETED
-    private String entityTable;      // Melyik táblát érintette, pl. user
-    private Integer entityId;        // Melyik sort érintette
-    private LocalDateTime createdAt; // Mikor történt
+    private Integer userId;
+    private Integer adminId;
+    private String action;
+    private String entityTable;
+    private Integer entityId;
+    private LocalDateTime createdAt;
 }

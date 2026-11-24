@@ -21,23 +21,28 @@ public class TrainerSchedulesController {
 
     private final TrainerSchedulesService trainerSchedulesService;
 
+//---------------------------------------------------------------------------------------------------------//
+//CreateTrainerSchedules
     @PostMapping
     public ResponseEntity<TrainerSchedulesResponse> createTrainerSchedule(
             @Valid @RequestBody CreateTrainerSchedulesRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(trainerSchedulesService.createTrainerSchedule(request));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetTrainerSchedules
     @GetMapping
     public ResponseEntity<List<TrainerSchedulesResponse>> getAllTrainerSchedules() {
         return ResponseEntity.ok(trainerSchedulesService.getAllTrainerSchedules());
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//GetTrainerSchedulesById
     @GetMapping("/{id}")
     public ResponseEntity<TrainerSchedulesResponse> getTrainerScheduleById(@PathVariable Integer id) {
         return ResponseEntity.ok(trainerSchedulesService.getTrainerScheduleById(id));
     }
-
+    //---------------------------------------------------------------------------------------------------------//
+//UpdateTrainerSchedules
     @PutMapping("/{id}")
     public ResponseEntity<TrainerSchedulesResponse> updateTrainerSchedule(
             @PathVariable Integer id,
