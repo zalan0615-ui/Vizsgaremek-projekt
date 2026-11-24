@@ -242,164 +242,130 @@
     document.querySelector('#site-header');
 
 
-  /* ============================================================
-     7. ADMIN NAVBAR
-  ============================================================ */
+      
+/* ============================================================
+   7. ADMIN NAVBAR
+============================================================ */
 
-  if (header) {
+if (header) {
+  if (page === 'admin') {
 
-    if (page === 'admin') {
+    header.className = 'site-header admin-topbar';
 
-      header.className =
-        'site-header admin-topbar';
+    header.innerHTML = `
+      <div class="container nav-wrap d-flex align-items-center">
 
-      header.innerHTML = `
-        <div class="container nav-wrap d-flex align-items-center">
+        <!-- LOGÓ ÉS FELIRAT -->
+        <a class="brand navbar-brand forge-brand"
+           href="${url('home')}"
+           aria-label="FORGE Budapest">
 
-          <a class="brand" href="${url('home')}">
-            FORGE<span>BUDAPEST</span>
-          </a>
+          <img src="../Képek/Logo.png"
+               alt=""
+               class="forge-logo">
 
-          <div class="admin-top-info ms-auto">
-            <b>ADMIN PANEL</b>
-            <small>adminisztrációs kezelőfelület</small>
-          </div>
-
-          <span class="admin-account d-flex align-items-center gap-2">
-            <span class="user-line-icon">♙</span>
-            Admin
+          <span class="forge-brand-text">
+            <span class="forge-name">FORGE</span>
+            <span class="forge-city">BUDAPEST</span>
           </span>
+        </a>
 
+        <!-- ADMIN PANEL FELIRAT -->
+        <div class="admin-top-info ms-auto">
+          <b>ADMIN PANEL</b>
+          <small>adminisztrációs kezelőfelület</small>
         </div>
-      `;
 
-    } else {
+        <!-- ADMIN FELHASZNÁLÓ -->
+        <span class="admin-account d-flex align-items-center gap-2">
+          <span class="user-line-icon">♙</span>
+          Admin
+        </span>
 
+      </div>`;
+  } else {
 
-      /* ========================================================
-         8. NORMÁL NAVBAR - MENÜ ÉS BEJELENTKEZÉS
-      ======================================================== */
+    /* ========================================================
+       8. NORMÁL NAVBAR - MENÜ ÉS BEJELENTKEZÉS
+    ======================================================== */
 
-      header.className =
-        'site-header navbar navbar-expand-lg navbar-dark';
+    header.className = 'site-header navbar navbar-expand-lg navbar-dark';
 
-      header.innerHTML = `
-        <div class="container nav-wrap">
+    header.innerHTML = `
+      <div class="container nav-wrap">
 
-          <!-- LOGÓ -->
-          <a
-            class="brand navbar-brand"
-            href="${url('home')}"
-            aria-label="FORGE Budapest">
-            FORGE<span>BUDAPEST</span>
-          </a>
+        <!-- LOGÓ ÉS FELIRAT -->
+        <a class="brand navbar-brand forge-brand"
+           href="${url('home')}"
+           aria-label="FORGE Budapest">
 
-          <!-- MOBIL MENÜ -->
-          <button
-            class="navbar-toggler menu-toggle"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#forgeNavigation"
-            aria-controls="forgeNavigation"
-            aria-expanded="false"
-            aria-label="Menü megnyitása">
+          <img src="../Képek/Logo.png"
+               alt=""
+               class="forge-logo">
 
-            <span class="navbar-toggler-icon"></span>
+          <span class="forge-brand-text">
+            <span class="forge-name">FORGE</span>
+            <span class="forge-city">BUDAPEST</span>
+          </span>
+        </a>
 
-          </button>
+        <!-- MOBIL MENÜ -->
+        <button class="navbar-toggler menu-toggle"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#forgeNavigation"
+                aria-controls="forgeNavigation"
+                aria-expanded="false"
+                aria-label="Menü megnyitása">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div
-            class="collapse navbar-collapse"
-            id="forgeNavigation">
+        <div class="collapse navbar-collapse" id="forgeNavigation">
 
-            <!-- NAVIGÁCIÓS LINKEK -->
-            <nav
-              class="navbar-nav nav-links"
-              aria-label="Főmenü">
+          <!-- NAVIGÁCIÓS LINKEK -->
+          <nav class="navbar-nav nav-links" aria-label="Főmenü">
+            ${links.map(([id, name]) => `
+              <a class="nav-link ${page === id ? 'active' : ''}"
+                 href="${url(id)}">${name}</a>
+            `).join('')}
 
-              ${links.map(([id, name]) => `
-                <a
-                  class="nav-link ${page === id ? 'active' : ''}"
-                  href="${url(id)}">
-                  ${name}
-                </a>
-              `).join('')}
+            <a class="nav-link mobile-shortcuts"
+               href="${url('schedule')}">Általános órarend</a>
 
-              <a
-                class="nav-link mobile-shortcuts"
-                href="${url('schedule')}">
-                Általános órarend
-              </a>
+            <a class="nav-link mobile-shortcuts"
+               href="${url('classes')}">Foglalkozások</a>
+          </nav>
 
-              <a
-                class="nav-link mobile-shortcuts"
-                href="${url('classes')}">
-                Foglalkozások
-              </a>
+          <!-- BEJELENTKEZÉS ÉS PRÓBAÓRA -->
+          <div class="nav-actions d-flex align-items-center">
 
-            </nav>
+            <div class="dropdown">
+              <button type="button"
+                      class="btn account-link dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                <span class="user-line-icon">♙</span>
+                <span>Belépés</span>
+              </button>
 
-
-            <!-- BEJELENTKEZÉS ÉS PRÓBAÓRA -->
-            <div class="nav-actions d-flex align-items-center">
-
-              <div class="dropdown">
-
-                <button
-                  type="button"
-                  class="btn account-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-
-                  <span class="user-line-icon">♙</span>
-                  <span>Belépés</span>
-
-                </button>
-
-                <ul class="dropdown-menu dropdown-menu-end forge-dropdown">
-
-                  <li>
-                    <a class="dropdown-item" href="${url('login')}">
-                      Bejelentkezés
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="${url('register')}">
-                      Regisztráció
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="${url('personal')}">
-                      Saját órarend
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="${url('adminLogin')}">
-                      Adminpanel bejelentkezés
-                    </a>
-                  </li>
-
-                </ul>
-
-              </div>
-
-              <a
-                class="btn forge-cta"
-                href="${url('contact')}">
-                PRÓBAÓRA
-              </a>
-
+              <ul class="dropdown-menu dropdown-menu-end forge-dropdown">
+                <li><a class="dropdown-item" href="${url('login')}">Bejelentkezés</a></li>
+                <li><a class="dropdown-item" href="${url('register')}">Regisztráció</a></li>
+                <li><a class="dropdown-item" href="${url('personal')}">Saját órarend</a></li>
+                <li><a class="dropdown-item" href="${url('adminLogin')}">Adminpanel bejelentkezés</a></li>
+              </ul>
             </div>
 
+            <a class="btn forge-cta" href="${url('contact')}">
+              PRÓBAÓRA
+            </a>
+
           </div>
         </div>
-      `;
-
-    }
+      </div>`;
   }
+}
+
 
 
   /* ============================================================

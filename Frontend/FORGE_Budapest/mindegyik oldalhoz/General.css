@@ -645,6 +645,88 @@ p {
 }
 
 
+
+
+
+/* ----------------------------------------------------------
+   NAVBAR - LOGÓ ÉS FELIRAT EGYMÁS MELLETT
+---------------------------------------------------------- */
+
+.site-header .forge-brand {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    gap: 12px !important;
+    width: auto !important;
+    height: auto !important;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.site-header .forge-logo {
+    display: block !important;
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: contain;
+    flex: 0 0 60px;
+}
+
+.site-header .forge-brand-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center;
+    width: auto !important;
+    line-height: 1.1;
+    flex-shrink: 0;
+}
+
+.site-header .forge-name {
+    display: block;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.site-header .forge-city {
+    display: block;
+    color: #d4ff45;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* ----------------------------------------------------------
+   NAVBAR - MOBILOS LOGÓMÉRET
+---------------------------------------------------------- */
+
+@media (max-width: 576px) {
+    .site-header .forge-logo {
+        width: 45px !important;
+        height: 45px !important;
+        flex-basis: 45px;
+    }
+
+    .site-header .forge-name {
+        font-size: 20px;
+    }
+
+    .site-header .forge-city {
+        font-size: 9px;
+    }
+
+    .site-header .forge-brand {
+        gap: 8px !important;
+    }
+}
+
+
+
+
+
 /* ================================================================
    BOOTSTRAP 5.3.6 + FORGE TÉMA
    A Bootstrap alapstílusai után töltődik be ez a közös CSS.
