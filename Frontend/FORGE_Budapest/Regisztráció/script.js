@@ -3,6 +3,8 @@
    REGISZTRÁCIÓ - FORGE BUDAPEST
 ============================================================ */
 
+import { apiPost } from "../mindegyik oldalhoz/osszekotes.js";
+
 /* ----------------------------------------------------------
    1. REGISZTRÁCIÓS ŰRLAP ÉS ÜZENET KIVÁLASZTÁSA
 ---------------------------------------------------------- */

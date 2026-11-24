@@ -3,6 +3,8 @@
    BEJELENTKEZÉS OLDAL - FORGE BUDAPEST
 ============================================================ */
 
+import { apiPost } from "../mindegyik oldalhoz/osszekotes.js";
+
 /* ----------------------------------------------------------
    1. JELSZÓMEZŐ ÉS HIBAÜZENET KIVÁLASZTÁSA
 ---------------------------------------------------------- */

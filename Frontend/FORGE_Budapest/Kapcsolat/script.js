@@ -3,6 +3,8 @@
    KAPCSOLAT OLDAL - FORGE BUDAPEST
 ============================================================ */
 
+import { apiPost } from "../mindegyik oldalhoz/osszekotes.js";
+
 /* ----------------------------------------------------------
    1. KAPCSOLATFELVÉTELI ŰRLAP KIVÁLASZTÁSA
 ---------------------------------------------------------- */
