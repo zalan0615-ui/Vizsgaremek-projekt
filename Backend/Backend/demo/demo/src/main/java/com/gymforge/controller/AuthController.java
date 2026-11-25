@@ -33,11 +33,11 @@ public class AuthController {
 @PostMapping("/login")
 public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest request) {
 
-    User user = userRepository.getUserByEmail(request.getEmail())
-            .orElseThrow(() -> new ResourceNotFoundException("Hibás email vagy jelszó"));
+    User user = userRepository.GetUserByEmailorUsername(request.getIdentifier())
+            .orElseThrow(() -> new ResourceNotFoundException("Hibás email/felhasználó név vagy jelszó"));
 
     if (!passwordEncoder.matches(request.getPassword(), user.getPasswordHash())) {
-        throw new ResourceNotFoundException("Hibás email vagy jelszó");
+        throw new ResourceNotFoundException("Hibás email/felhasználónév vagy jelszó");
     }
 
     String token = jwtUtil.generateToken(user.getId(), user.getEmail(), "USER");

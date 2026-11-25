@@ -92,13 +92,13 @@ public class UserRepository {
 
 
 //---------------------------------------------------------------------------------------------------------//
-//Get userByEmail
+//Get userByEmailorUsername
 
-    public Optional<User> getUserByEmail(String email) {
-        StoredProcedureQuery query = entityManager.createStoredProcedureQuery("GetUserByEmail", User.class);
+    public Optional<User> GetUserByEmailorUsername(String answear) {
+        StoredProcedureQuery query = entityManager.createStoredProcedureQuery("GetUserByEmailorUsername", User.class);
 
         query.registerStoredProcedureParameter(1, String.class, ParameterMode.IN);
-        query.setParameter(1, email);
+        query.setParameter(1, answear);
 
         List<User> result = query.getResultList();
         return result.stream().findFirst();

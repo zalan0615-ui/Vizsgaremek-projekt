@@ -31,12 +31,6 @@ public class GymInfoService {
     }
 
     //-----------------------------------------------------------------------------
-//GetGymInfoByID!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    public GymInfoResponse getGymInfoById(Integer id) {
-        return toResponse(findGymInfo(id));
-    }
-
-//-----------------------------------------------------------------------------
 //UpdateGymInfo
 
     @Transactional

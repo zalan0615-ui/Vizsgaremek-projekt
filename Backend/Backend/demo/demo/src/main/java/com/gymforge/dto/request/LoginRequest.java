@@ -9,9 +9,8 @@ import lombok.Setter;
 @Setter
 public class LoginRequest {
 
-    @NotBlank(message = "Az email megadása kötelező")
-    @Email(message = "Nem érvényes email formátum")
-    private String email;
+    @NotBlank(message = "Az email/felhasználónév megadása kötelező")
+    private String identifier;
 
     @NotBlank(message = "A jelszó megadása kötelező")
     private String password;
