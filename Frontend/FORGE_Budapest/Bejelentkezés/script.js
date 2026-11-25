@@ -1,70 +1,143 @@
 
 /* ============================================================
-   BEJELENTKEZÉS OLDAL - FORGE BUDAPEST
+   BEJELENTKEZÉS - FORGE BUDAPEST
 ============================================================ */
 
-import { apiPost } from "../mindegyik oldalhoz/osszekotes.js";
-
 /* ----------------------------------------------------------
-   1. JELSZÓMEZŐ ÉS HIBAÜZENET KIVÁLASZTÁSA
+   1. BACKEND BEJELENTKEZÉS IMPORTÁLÁSA
 ---------------------------------------------------------- */
 
-/** Bejelentkezés – csak böngészőben tárolt DEMÓ fiókokkal működik. */
-const passwordInput = document.querySelector('#password');
-const loginMessage = document.querySelector('#login-message');
+import { loginUser } from "../mindegyik oldalhoz/login.js";
+
+console.log("[LOGIN] Bejelentkezési modul betöltve.");
 
 /* ----------------------------------------------------------
-   2. JELSZÓ MEGJELENÍTÉSE ÉS ELREJTÉSE
+   2. HTML ELEMEK ELLENŐRZÉSE
 ---------------------------------------------------------- */
 
-document.querySelector('.show-password').addEventListener('click', () => {
-  passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+const passwordInput = document.querySelector("#password");
+const loginMessage = document.querySelector("#login-message");
+const loginForm = document.querySelector("#login-form");
+const emailInput = document.querySelector("#email");
+
+console.log("[LOGIN] HTML elemek:", {
+    form: !!loginForm,
+    email: !!emailInput,
+    password: !!passwordInput,
+    message: !!loginMessage
 });
 
-/* ----------------------------------------------------------
-   3. ELFELEJTETT JELSZÓ GOMB KEZELÉSE
----------------------------------------------------------- */
-
-document.querySelector('#forgot-password').addEventListener('click', (event) => {
-  event.preventDefault();
-  FORGE.notify('Jelszó-visszaállítás csak backend bekötése után elérhető.');
-});
+if (!loginForm || !emailInput || !passwordInput || !loginMessage) {
+    console.error("[LOGIN] Hiányzó HTML elem! Ellenőrizd az ID-kat.");
+}
 
 /* ----------------------------------------------------------
-   4. BEJELENTKEZÉSI ŰRLAP ELKÜLDÉSE
+   3. JELSZÓ MEGJELENÍTÉSE
 ---------------------------------------------------------- */
 
-document.querySelector('#login-form').addEventListener('submit', (event) => {
-  event.preventDefault();
+const showPassword = document.querySelector(".show-password");
 
-  /* ----------------------------------------------------------
-     5. FELHASZNÁLÓ ADATAINAK LEKÉRÉSE
-  ---------------------------------------------------------- */
+if (showPassword && passwordInput) {
+    showPassword.addEventListener("click", () => {
+        passwordInput.type =
+            passwordInput.type === "password" ? "text" : "password";
+    });
+} else {
+    console.warn("[LOGIN] A jelszó megjelenítése gomb nem található.");
+}
 
-  const email = document.querySelector('#email').value;
-  const password = passwordInput.value;
-  const user = FORGE.store.get('user', null);
+/* ----------------------------------------------------------
+   4. ELFELEJTETT JELSZÓ
+---------------------------------------------------------- */
 
-  /* ----------------------------------------------------------
-     6. BEJELENTKEZÉSI ADATOK ELLENŐRZÉSE
-  ---------------------------------------------------------- */
+const forgotPassword = document.querySelector("#forgot-password");
 
-  if (user && user.email === email && user.password === password) {
+if (forgotPassword) {
+    forgotPassword.addEventListener("click", (event) => {
+        event.preventDefault();
+        FORGE.notify("A jelszó-visszaállítás még nincs bekötve.");
+    });
+}
 
-    /* ----------------------------------------------------------
-       7. SIKERES BEJELENTKEZÉS
-    ---------------------------------------------------------- */
+/* ----------------------------------------------------------
+   5. BEJELENTKEZÉS ELKÜLDÉSE
+---------------------------------------------------------- */
 
-    FORGE.store.set('session', { name: user.name, email });
-    FORGE.notify('Sikeres demó bejelentkezés!');
-    window.location.href = FORGE.url('personal');
+if (loginForm && emailInput && passwordInput && loginMessage) {
 
-  } else {
+    loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    /* ----------------------------------------------------------
-       8. SIKERTELEN BEJELENTKEZÉS
-    ---------------------------------------------------------- */
+        console.log("[LOGIN] Bejelentkezési gomb megnyomva.");
 
-    loginMessage.textContent = 'Nincs egyező demó fiók. Előbb regisztrálj.';
-  }
-});
+        const identifier = emailInput.value.trim();
+        const password = passwordInput.value;
+        const submitButton =
+            loginForm.querySelector('button[type="submit"]');
+
+        loginMessage.textContent = "";
+
+        if (!identifier || !password) {
+            console.error("[LOGIN] Hiányzó e-mail/felhasználónév vagy jelszó.");
+            loginMessage.textContent = "Minden mezőt ki kell tölteni!";
+            return;
+        }
+
+        console.log("[LOGIN] Azonosító:", identifier);
+        console.log("[LOGIN] Jelszó megadva:", password.length > 0);
+
+        /* ----------------------------------------------------------
+           6. BACKEND MEGHÍVÁSA
+        ---------------------------------------------------------- */
+
+        try {
+            if (submitButton) submitButton.disabled = true;
+
+            console.log("[LOGIN] POST /api/auth/login indítása.");
+
+            const result = await loginUser(identifier, password);
+
+            console.log("[LOGIN] Backend bejelentkezés sikeres.");
+            console.log("[LOGIN] Token érkezett:", !!result?.token);
+
+            /* ----------------------------------------------------------
+               7. MUNKAMENET MENTÉSE
+            ---------------------------------------------------------- */
+
+            FORGE.store.set("session", {
+                name: identifier
+            });
+
+            console.log("[LOGIN] Frontend munkamenet mentve.");
+
+            /* ----------------------------------------------------------
+               8. ÁTIRÁNYÍTÁS
+            ---------------------------------------------------------- */
+
+            FORGE.notify("Sikeres bejelentkezés!");
+
+            console.log("[LOGIN] Átirányítás a saját órarendre.");
+
+            window.location.href = FORGE.url("personal");
+
+        } catch (error) {
+
+            /* ----------------------------------------------------------
+               9. HIBA MEGJELENÍTÉSE
+            ---------------------------------------------------------- */
+
+            console.error("[LOGIN] BEJELENTKEZÉSI HIBA:", error);
+            console.error("[LOGIN] Hiba típusa:", error.name);
+            console.error("[LOGIN] Hibaüzenet:", error.message);
+
+            loginMessage.textContent =
+                "Sikertelen bejelentkezés! " + error.message;
+
+        } finally {
+            if (submitButton) submitButton.disabled = false;
+        }
+    });
+
+} else {
+    console.error("[LOGIN] Nem sikerült regisztrálni az űrlap eseménykezelőjét.");
+}
