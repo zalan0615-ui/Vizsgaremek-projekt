@@ -32,14 +32,7 @@ public class GymInfoController {
         return ResponseEntity.ok(gymInfoService.getAllGymInfo());
     }
 //---------------------------------------------------------------------------------------------------------//
-//GetGymInfoByID KIKELL TÖRÖLNI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-    @GetMapping("/{id}")
-    public ResponseEntity<GymInfoResponse> getGymInfoById(@PathVariable Integer id) {
-        return ResponseEntity.ok(gymInfoService.getGymInfoById(id));
-    }
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //---------------------------------------------------------------------------------------------------------//
 //UpdateGymInfo MEGNÉZNI, HOGY KELL-E ID. SZERINTEM NEM!!!!!!!!!!!!!!!!!!!!!!!!!!!!

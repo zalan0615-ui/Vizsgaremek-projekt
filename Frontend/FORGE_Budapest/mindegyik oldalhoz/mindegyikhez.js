@@ -516,6 +516,8 @@ FORGE.lessons = [
     spots: 8
   },
 
+
+
   {
     id: 8,
     day: 2,
@@ -698,3 +700,4 @@ window.ForgeUI = {
   }
 
 };
+

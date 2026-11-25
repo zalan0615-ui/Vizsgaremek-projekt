@@ -21,7 +21,7 @@ public class UserRepository {
 
     private final EntityManager entityManager;
 
-//---------------------------------------------------------------------------------------------------------//
+    //---------------------------------------------------------------------------------------------------------//
 //Create User
     public void createUser(Integer imageId, String username, String email, String passwordHash) {
         StoredProcedureQuery query = entityManager.createStoredProcedureQuery("createuser");
@@ -89,6 +89,18 @@ public class UserRepository {
 
         query.execute();
     }
-}
+
 
 //---------------------------------------------------------------------------------------------------------//
+//Get userByEmailorUsername
+
+    public Optional<User> GetUserByEmailorUsername(String answear) {
+        StoredProcedureQuery query = entityManager.createStoredProcedureQuery("GetUserByEmailorUsername", User.class);
+
+        query.registerStoredProcedureParameter(1, String.class, ParameterMode.IN);
+        query.setParameter(1, answear);
+
+        List<User> result = query.getResultList();
+        return result.stream().findFirst();
+    }
+}
