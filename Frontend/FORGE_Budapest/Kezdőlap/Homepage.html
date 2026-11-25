@@ -9,7 +9,7 @@
 
     <title>Kezdőlap | FORGE Budapest</title>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet"/>
 
     <!-- Közös CSS -->
@@ -21,8 +21,16 @@
 
 <body data-bs-theme="dark" data-page="home">
 
-    <!-- Közös fejléc -->
+    <!-- ========================================================
+         1. NAVBAR - KÖZÖS FEJLÉC
+    ======================================================== -->
+
     <header id="site-header"></header>
+
+
+    <!-- ========================================================
+         2. KEZDŐLAP TARTALMA
+    ======================================================== -->
 
     <main class="page-main">
 
@@ -67,13 +75,21 @@
 
                 </div>
 
-                <!-- EDZŐ FOTÓ HELYE -->
+
+                <!-- ========================================================
+                     3. EDZŐ FOTÓ
+                ======================================================== -->
+
                 <div
                     aria-label="A Figma edzőfotójának fenntartott helye"
                     class="home-photo">
                 </div>
 
-                <!-- BACKENDBŐL BETÖLTÖTT STATISZTIKÁK -->
+
+                <!-- ========================================================
+                     4. BACKENDBŐL BETÖLTÖTT STATISZTIKÁK
+                ======================================================== -->
+
                 <div class="home-metrics">
 
                     <!-- AKTÍV TAGOK -->
@@ -96,6 +112,7 @@
 
                     </div>
 
+
                     <!-- NYITVATARTÁS -->
                     <div>
 
@@ -115,6 +132,7 @@
                         </small>
 
                     </div>
+
 
                     <!-- PRÉMIUM GÉPEK -->
                     <div>
@@ -144,30 +162,26 @@
 
     </main>
 
-    <!-- Közös lábléc -->
+
+    <!-- ========================================================
+         5. FOOTER - KÖZÖS LÁBLÉC
+    ======================================================== -->
+
     <footer id="site-footer"></footer>
+
+
+    <!-- ========================================================
+         6. JAVASCRIPT FÁJLOK
+    ======================================================== -->
 
     <!-- Bootstrap JavaScript -->
     <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
 
-    <!-- Közös frontend funkciók -->
+    <!-- Közös navbar, footer és frontend funkciók -->
     <script src="../mindegyik oldalhoz/mindegyikhez.js"></script>
 
-    <!-- Kezdőlap saját JavaScript -->
-    <script src="script.js"></script>
-
-
-
-<!-- Bootstrap -->
-<script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
-
-<!-- Közös JavaScript -->
-<script src="../mindegyik oldalhoz/mindegyikhez.js"></script>
-
-<!-- Kezdőlap JavaScript modul -->
-<script type="module" src="script.js"></script>
-
-
+    <!-- Kezdőlap backendkapcsolata -->
+    <script type="module" src="script.js"></script>
 
 </body>
 </html>
